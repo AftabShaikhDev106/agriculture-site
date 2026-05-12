@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How We Do It | EnerGlobix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <style>
+      .hero-bg {
+        background-image: url("../assets/Links/compressed-img/agriculture-img/ship-agri.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .circle-img {
+        background-image: url("../assets/Links/compressed-img/circle-img-1.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .circle-1 {
+        background-image: url("../assets/Links/compressed-img/agri-hero.webp");
+        background-size: 350%;
+        background-position: 75% 50%;
+        background-repeat: no-repeat;
+      }
+
+      .circle-2 {
+        background-image: url("../assets/Links/compressed-img/agri-circle-2.webp");
+        background-size: 170%;
+        background-position: 30% 50%;
+        background-repeat: no-repeat;
+      }
+
+      .circle-3 {
+        background-image: url("../assets/Links/compressed-img/agri-circle-3.webp");
+        background-size: 260%;
+        background-position: 30% top;
+        background-repeat: no-repeat;
+      }
+
+      .circle-4 {
+        background-image: url("../assets/Links/compressed-img/agri-circle-4.webp");
+        background-size: 350%;
+        background-position: 75% bottom;
+        background-repeat: no-repeat;
+      }
+
+      .circle-5 {
+        background-image: url("../assets/Links/compressed-img/agri-circle-5.webp");
+        background-size: 200%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .circle-6 {
+        background-image: url("../assets/Links/compressed-img/agri-circle-6.webp");
+        background-size: 350%;
+        background-position: 20% bottom;
+        background-repeat: no-repeat;
+      }
+
+      .split-right-img {
+        background-image: url("../assets/Links/compressed-img/agriculture-img/agriculture-img1.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Mobile menu transition */
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      #mobile-menu.hidden-menu {
+        transform: translateX(100%);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar -->
+
+    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
+      <nav
+        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
+      >
+        <a href="../index.html">
+          <img src="../assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
+        </a>
+
+        <div class="flex items-center gap-6 lg:gap-14">
+          <!-- Desktop Menu -->
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="./who-we-are.html">Who We Are</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="./what-we-do.html">What We Do</a>
+            </li>
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="./how-we-do-it.html">How We Do it</a>
+            </li>
+
+            <li
+              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+            >
+              <a href="../contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <i
+            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
+            onclick="toggleMenu()"
+          ></i>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
+      >
+        <i
+          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
+          onclick="toggleMenu()"
+        ></i>
+        <img src="../assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
+        <ul class="flex flex-col items-center gap-8">
+          <li class="cursor-pointer">
+            <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="./how-we-do-it.html" onclick="toggleMenu()"
+              >How We Do it</a
+            >
+          </li>
+          <li class="cursor-pointer">
+            <a href="../invest.html" onclick="toggleMenu()">Invest</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="../contact.html" onclick="toggleMenu()">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section
+      class="min-h-screen lg:h-[105vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60"
+      ></div>
+      <div
+        class="relative z-10 w-full flex items-center justify-center px-6 py-20"
+      >
+        <div class="max-w-5xl w-full">
+          <h4
+            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
+          >
+            EnerGlobix Agriculture
+          </h4>
+          <h4
+            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
+          >
+            We move global supply efficiently at scale
+          </h4>
+          <div class="flex flex-col items-center">
+            <h4
+              class="mt-8 text-lg lg:text-xl text-white font-bold text-center"
+            >
+              Explore our vision
+            </h4>
+            <img
+              src="../assets/Links/arrow.svg"
+              alt="arrow"
+              class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
+    >
+      <div
+        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-[#f8f7f2] rounded-[100%] bg-[--color-beige-dark]"
+      ></div>
+
+      <div
+        id="section-how-inner"
+        class="relative z-20 pt-16 lg:pt-28 px-6 md:px-12"
+      >
+        <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
+          <h2
+            class="text-2xl lg:text-[30px] font-bold mb-4 text-[--color-agri-a] leading-tight"
+          >
+            How We Do
+          </h2>
+          <p
+            class="text-black leading-tight text-lg lg:text-[26px] mb-6 max-w-full lg:max-w-[76%] mx-auto"
+          >
+            At EnerGlobix Agriculture, logistics is not a support function, it
+            is the infrastructure that enables global supply.
+          </p>
+          <p
+            class="text-black leading-tight text-lg lg:text-[26px] max-w-full lg:max-w-[76%] mx-auto"
+          >
+            We operate across international trade flows, ensuring that
+            commodities move efficiently, reliably, and at scale, from origin to
+            destination.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-3 md:grid-cols-6 w-full lg:w-[70%] gap-4 lg:gap-10 mt-10 mx-auto px-4"
+        >
+          <div
+            class="aspect-square rounded-full circle-1 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-2 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-3 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-4 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-5 shadow-lg border-2 border-white"
+          ></div>
+          <div
+            class="aspect-square rounded-full circle-6 shadow-lg border-2 border-white"
+          ></div>
+        </div>
+
+        <h1
+          class="text-2xl lg:text-[30px] font-bold mb-4 text-[--color-orange] leading-tight mt-6 text-center"
+        >
+          Create new supply chain vector here
+        </h1>
+
+        <div class="pt-14 flex flex-col gap-8 w-full items-center">
+          <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
+            <h2
+              class="text-2xl lg:text-[30px] font-bold mb-4 text-[--color-agri-a] leading-tight"
+            >
+              Logistics That Move Global Supply
+            </h2>
+            <p
+              class="text-black leading-tight text-lg lg:text-[26px] mb-6 max-w-full lg:max-w-[76%] mx-auto"
+            >
+              We coordinate the movement of commodities across regions, markets,
+              and supply chains, maintaining flow in systems that operate
+              without pause.
+            </p>
+          </div>
+
+          <div
+            class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 border border-[--color-agri-a] mb-12 lg:mb-[100px] py-10 lg:py-16"
+          >
+            <div
+              class="w-full h-full flex flex-col gap-4 items-center border-b lg:border-b-0 lg:border-r border-[--color-agri-a] px-10 lg:px-16"
+            >
+              <h1
+                class="text-2xl lg:text-[30px] font-bold mb-2 text-[--color-agri-a] text-center leading-tight max-w-full lg:max-w-[80%]"
+              >
+                Structured Supply Chain
+              </h1>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center"
+              >
+                We manage the full logistics flow:
+              </p>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center mt-1"
+              >
+                Sourcing and coordination at origin Transportation across
+                international routes Port handling and distribution.
+              </p>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center mt-1"
+              >
+                Delivery into demand-driven markets.
+              </p>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center mt-1"
+              >
+                Each stage is aligned to ensure timing, efficiency, and product
+                integrity
+              </p>
+            </div>
+
+            <div
+              class="w-full h-full flex flex-col gap-4 items-center px-10 lg:px-16"
+            >
+              <h1
+                class="text-2xl lg:text-[30px] font-bold mb-2 text-[--color-agri-a] text-center leading-tight max-w-full lg:max-w-[80%]"
+              >
+                Reliability at Scale
+              </h1>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center"
+              >
+                In global commodity supply, reliability defines value.
+              </p>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center mt-1"
+              >
+                Our logistics network is built to:
+              </p>
+              <p
+                class="text-black leading-tight text-lg lg:text-xl mx-auto text-center mt-1"
+              >
+                Handle high-volume shipments Maintain consistent delivery
+                schedules Adapt to changing market conditions Ensuring that
+                supply continues, regardless of complexity
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="w-full bg-black relative -mt-[100px] lg:-mt-[140px] pt-[140px] pb-10 lg:pt-[204px] lg:pb-16 px-6"
+    >
+      <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
+        <h2
+          class="text-2xl lg:text-[30px] font-bold mb-4 text-[--color-beige-c] leading-tight"
+        >
+          Global Reach. Local Execution.
+        </h2>
+        <p
+          class="text-white leading-tight text-lg lg:text-[26px] mb-6 max-w-full lg:max-w-[76%] mx-auto"
+        >
+          We operate across international markets while working with trusted
+          logistics partners and local networks.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="w-full bg-black grid grid-cols-1 lg:grid-cols-2 items-stretch"
+    >
+      <div class="w-full min-h-[500px] lg:min-h-0 bg-[--color-beige-c]">
+        <div
+          class="flex relative flex-col items-center gap-10 py-20 px-6 h-full w-full bg-[#B8A685]/80"
+        >
+          <img src="../assets/Links/logo-mini-agri2.png" class="w-14" />
+          <div class="flex flex-col items-center gap-4">
+            <h4
+              class="text-[--color-agri-a] leading-tight text-xl lg:text-2xl mx-auto font-semibold text-center w-full max-w-full"
+            >
+              Built for Continuous Flow
+            </h4>
+            <ul class="flex flex-col gap-6 items-start lg:items-center">
+              <li
+                class="text-black leading-none text-lg lg:text-[22px] text-center w-full flex items-center justify-center gap-3"
+              >
+                <span
+                  class="block h-2 aspect-square rounded-full bg-black"
+                ></span>
+                Navigate regional requirements
+              </li>
+              <li
+                class="text-black leading-none text-lg lg:text-[22px] text-center w-full flex items-center justify-center gap-3"
+              >
+                <span
+                  class="block h-2 aspect-square rounded-full bg-black"
+                ></span>
+                Maintain flexibility across routes
+              </li>
+              <li
+                class="text-black leading-none text-lg lg:text-[22px] text-center w-full flex items-center justify-center gap-3"
+              >
+                <span
+                  class="block h-2 aspect-square rounded-full bg-black"
+                ></span>
+                Deliver with precision in diverse markets
+              </li>
+            </ul>
+
+            <h4
+              class="text-[--color-agri-a] leading-tight text-xl lg:text-2xl mx-auto font-semibold text-center w-full max-w-full"
+            >
+              Our focus is simple:
+            </h4>
+
+            <p
+              class="text-black leading-normal text-lg lg:text-[22px] text-center w-full max-w-[60%]"
+            >
+              To ensure that essential commodities move without disruption ,
+              supporting the systems that depend on them.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-64 lg:h-auto py-28 split-right-img"></div>
+    </section>
+
+    <section
+      id="section-contact"
+      class="w-full min-h-screen bg-black relative px-6 py-10 lg:py-16"
+    >
+      <h1
+        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[#B8A685] text-center leading-tight"
+      >
+        Contact us
+      </h1>
+
+      <div
+        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
+      >
+        <!-- Left Side: Contact Info -->
+        <div class="flex flex-col gap-6 lg:gap-2">
+          <div>
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+              Office Location
+            </h2>
+            <p class="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+          </div>
+          <div>
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+              Address
+            </h2>
+            <p class="text-gray-400 text-sm">Business Bay, Dubai</p>
+          </div>
+          <div>
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+              Contact
+            </h2>
+            <p class="text-gray-400 text-sm">info@energlobix.com</p>
+          </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <form action="#" class="flex flex-col gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input
+              type="text"
+              placeholder="Name*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+            <input
+              type="text"
+              placeholder="Phone*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input
+              type="email"
+              placeholder="Email*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+            <input
+              type="text"
+              placeholder="Company*"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Subject*"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+          />
+          <textarea
+            placeholder="Message*"
+            rows="4"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="w-full flex flex-col gap-10 items-center mt-24">
+        <div class="flex flex-col gap-1">
+          <img src="../assets/Links/logo-white.png" class="w-36" />
+          <p
+            class="text-[9px] tracking-widest text-center text-white uppercase"
+          >
+            Development
+          </p>
+        </div>
+
+        <h4 class="text-xl lg:text-[22px] text-[#B8A685]">
+          Explore Our Businesses
+        </h4>
+
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-16">
+          <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
+          <div class="flex gap-8">
+            <h4
+              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+            >
+              Terms of use
+            </h4>
+            <h4
+              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+            >
+              Privacy policy
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden-menu");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sliderTrack = document.getElementById("sliderTrack");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        if (sliderTrack && prevBtn && nextBtn) {
+          let currentIndex = 0;
+          const totalSlides = sliderTrack.children.length;
+
+          function getSlidesVisible() {
+            return window.innerWidth >= 768 ? 2 : 1;
+          }
+
+          function updateSlider() {
+            const maxIndex = totalSlides - getSlidesVisible();
+
+            // Adjust currentIndex if it's out of bounds after resize
+            if (currentIndex > maxIndex) {
+              currentIndex = Math.max(0, maxIndex);
+            }
+
+            const slide = sliderTrack.children[0];
+            const slideWidth = slide.offsetWidth;
+            const gap = 16; // gap-4 is 16px
+
+            const moveAmount = currentIndex * (slideWidth + gap);
+            sliderTrack.style.transform = `translateX(-${moveAmount}px)`;
+          }
+
+          prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateSlider();
+            }
+          });
+
+          nextBtn.addEventListener("click", () => {
+            const maxIndex = totalSlides - getSlidesVisible();
+            if (currentIndex < maxIndex) {
+              currentIndex++;
+              updateSlider();
+            }
+          });
+
+          window.addEventListener("resize", updateSlider);
+        }
+
+        // Dynamic padding observer was removed as overlap container no longer exists.
+      });
+    </script>
+
+    <!-- 
+GitHub Pages Asset Path Fixes:
+Original: /assets/Links/compressed-img/how-hero.webp -> Fixed: ./assets/Links/compressed-img/how-hero.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: /assets/Links/compressed-img/north-43-2.webp -> Fixed: ./assets/Links/compressed-img/north-43-2.webp\nOriginal: /assets/Links/compressed-img/exceptional1.webp -> Fixed: ./assets/Links/compressed-img/exceptional1.webp\nOriginal: /assets/Links/compressed-img/north-43-10.webp -> Fixed: ./assets/Links/compressed-img/north-43-10.webp\nOriginal: /assets/Links/compressed-img/north-43-9.webp -> Fixed: ./assets/Links/compressed-img/north-43-9.webp
+-->
+    <script src="../navbar-scroll.js"></script>
+  </body>
+</html>
