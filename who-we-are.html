@@ -18,6 +18,13 @@
         background-repeat: no-repeat;
       }
 
+      .empty-img {
+        background-image: url("./assets/Links/compressed-img/Agriculture Map.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
       .circle-img {
         background-image: url("./assets/Links/compressed-img/agriculture-img/agriculture-img6.webp");
         background-size: cover;
@@ -82,25 +89,25 @@
 
         <div class="flex items-center gap-6 lg:gap-14">
           <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-black">
             <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+              class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
             >
-              <a href="./who-we-are.html">Who We Are</a>
+              <a href="./who-we-are.html" class="active-link">Who We Are</a>
             </li>
             <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+              class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
             >
               <a href="./what-we-do.html">What We Do</a>
             </li>
             <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+              class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
             >
               <a href="./how-we-do-it.html">How We Do it</a>
             </li>
 
             <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
+              class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
             >
               <a href="./contact.html">Contact</a>
             </li>
@@ -251,7 +258,7 @@
               class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-black/60 rounded flex-1 flex flex-col items-center text-center"
             >
               <h3
-                class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-beige-c]"
+                class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-agri-dark]"
               >
                 Our Vision
               </h3>
@@ -295,7 +302,7 @@
               class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-black/60 rounded flex-1 flex flex-col items-center text-center"
             >
               <h3
-                class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-beige-c]"
+                class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-agri-dark]"
               >
                 Our Mission
               </h3>
@@ -354,7 +361,9 @@
       id="section-contact-accordion"
       class="w-full min-h-screen bg-[--color-agri-a] relative -mt-[100px] lg:-mt-[140px] pt-[164px] pb-16 sm:pt-[180px] sm:pb-20 lg:pt-[252px] lg:pb-28 flex flex-col justify-center"
     >
-      <div class="w-full h-screen flex flex-col justify-center items-center">
+      <div
+        class="w-full h-screen empty-img flex flex-col justify-center items-center"
+      >
         <div
           id="approach-accordion"
           class="w-full lg:max-w-[75%] bg-white/5 p-6 lg:p-10 mx-auto rounded flex flex-col items-center"
@@ -555,13 +564,8 @@
       <div
         class="w-full flex flex-col gap-8 sm:gap-10 items-center mt-20 sm:mt-24 px-6"
       >
-        <div class="flex flex-col gap-1 items-center">
-          <img src="./assets/Links/logo-white.png" class="w-32 sm:w-36" />
-          <p
-            class="text-[9px] tracking-widest text-center text-white uppercase"
-          >
-            Development
-          </p>
+        <div class="flex flex-col gap-1">
+          <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
         </div>
 
         <h4
@@ -570,11 +574,9 @@
           Explore Our Businesses
         </h4>
 
-        <div
-          class="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-16"
-        >
+        <div class="flex flex-col lg:flex-row items-center gap-8">
           <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
-          <div class="flex gap-6 sm:gap-8">
+          <div class="flex gap-8">
             <h4
               class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
             >

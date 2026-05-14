@@ -64,3 +64,12 @@
         *{
             font-family: 'Symbol', sans-serif;
         }
+
+        .active-link {
+            color: white !important;
+            font-weight: bold !important;
+        }
+
+        #main-header.bg-white .active-link {
+            color: var(--color-agri-dark) !important;
+        }
