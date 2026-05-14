@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (header) {
         header.classList.add("bg-white", "shadow-md");
       }
+      if (desktopMenu) {
+        desktopMenu.classList.remove("text-white");
+        desktopMenu.classList.add("text-black");
+      }
       if (mobileIcon) {
         mobileIcon.classList.remove("text-white");
         mobileIcon.classList.add("text-black");
@@ -26,6 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       if (header) {
         header.classList.remove("bg-white", "shadow-md");
+      }
+      if (desktopMenu) {
+        desktopMenu.classList.remove("text-black");
+        desktopMenu.classList.add("text-white");
       }
       if (mobileIcon) {
         mobileIcon.classList.remove("text-black");

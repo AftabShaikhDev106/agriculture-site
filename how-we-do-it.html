@@ -10,6 +10,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/Links/compressed-img/agriculture-img/ship-agri.webp"
+    />
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+        document.body.style.opacity = "1";
+      });
+    </script>
     <style>
       .hero-bg {
         background-image: url("./assets/Links/compressed-img/agriculture-img/ship-agri.webp");
@@ -74,6 +92,13 @@
         background-repeat: no-repeat;
       }
 
+      .empty-img-cream {
+        background-image: url("./assets/Links/compressed-img/worldmap-empty-cream.png");
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
       /* Mobile menu transition */
       #mobile-menu {
         transition: transform 0.3s ease-in-out;
@@ -96,7 +121,7 @@
 
         <div class="flex items-center gap-6 lg:gap-14">
           <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-black">
+          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
             <li
               class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
             >
@@ -116,7 +141,7 @@
             <li
               class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
             >
-              <a href="./contact.html">Contact</a>
+              <a href="#section-contact">Contact</a>
             </li>
           </ul>
 
@@ -150,7 +175,7 @@
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
           </li>
           <li class="cursor-pointer">
-            <a href="./contact.html" onclick="toggleMenu()">Contact</a>
+            <a href="#section-contact" onclick="toggleMenu()">Contact</a>
           </li>
         </ul>
       </div>
@@ -196,7 +221,7 @@
       class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
     >
       <div
-        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-[#f8f7f2] rounded-[100%] bg-[--color-beige-dark]"
+        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-[#f8f7f2] rounded-[100%] bg-[--color-beige-dark] empty-img-cream"
       ></div>
 
       <div
@@ -340,7 +365,7 @@
     >
       <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
         <h2
-          class="text-2xl lg:text-[30px] font-bold mb-4 text-[--color-agri-dark] leading-tight"
+          class="text-2xl lg:text-[30px] font-bold mb-4 text-[--color-beige-dark] leading-tight"
         >
           Global Reach. Local Execution.
         </h2>
