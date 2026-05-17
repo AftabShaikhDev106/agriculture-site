@@ -41,12 +41,14 @@
         }
 
         :root{
-             --color-beige-c: #B8A685;
+             --color-beige-c: rgb(194, 177, 143);
              --color-beige-dark: #dcc59d;
-             --color-agri-a: #213e1a;
+             --color-beige-card: #dbd2c2;
+             --color-agri-a: rgb(47, 70, 30);
              --color-agri-dark: #0e230a;
-             --color-blue: #1a2d51;
+             --color-blue: rgb(25,45,80);
              --color-orange: #e38b1a;
+             --color-new-black: rgb(3,2,0);
         }
        
         .symbol{

@@ -137,12 +137,6 @@
             >
               <a href="./how-we-do-it.html">How We Do it</a>
             </li>
-
-            <li
-              class="cursor-pointer hover:text-[--color-agri-dark] transition-colors"
-            >
-              <a href="#section-contact">Contact</a>
-            </li>
           </ul>
 
           <i
@@ -155,7 +149,7 @@
       <!-- Mobile Menu Overlay -->
       <div
         id="mobile-menu"
-        class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
+        class="fixed inset-0 bg-[--color-new-black] z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
       >
         <i
           class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
@@ -174,30 +168,25 @@
           <li class="cursor-pointer">
             <a href="./invest.html" onclick="toggleMenu()">Invest</a>
           </li>
-          <li class="cursor-pointer">
-            <a href="#section-contact" onclick="toggleMenu()">Contact</a>
-          </li>
         </ul>
       </div>
     </header>
 
     <section
-      class="min-h-screen lg:h-[105vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
+      class="min-h-[125vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
     >
+      <div class="absolute inset-0 bg-black/40"></div>
       <div
-        class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/100"
-      ></div>
-      <div
-        class="relative z-10 w-full flex items-center justify-center px-6 py-20"
+        class="relative z-10 w-full flex items-center justify-center px-6 pt-20 pb-36 lg:pb-52"
       >
         <div class="max-w-5xl w-full">
           <h4
-            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
+            class="text-white leading-[1.3] text-center text-[41px] md:text-[53px]"
           >
             EnerGlobix Agriculture
           </h4>
           <h4
-            class="text-white leading-[1.2] text-center text-3xl md:text-4xl lg:text-[44px]"
+            class="text-white leading-[1.3] text-center text-[41px] md:text-[53px]"
           >
             Sustaining everyday life
           </h4>
@@ -207,17 +196,20 @@
             >
               Explore our vision
             </h4>
-            <img
-              src="./assets/Links/arrow.svg"
-              alt="arrow"
-              class="w-[40px] lg:w-[60px] mt-3 transition-all duration-500 cursor-pointer"
-            />
+            <a href="#second-section" class="mt-2 block">
+              <img
+                src="./assets/Links/arrow.svg"
+                alt="arrow"
+                class="w-[45px] transition-all duration-500 cursor-pointer"
+              />
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <section
+      id="second-section"
       class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
     >
       <div
@@ -227,12 +219,12 @@
       <div class="relative z-20 py-20 lg:py-28 pb-10 px-6 md:px-12">
         <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
           <h2
-            class="text-2xl lg:text-[30px] font-bold mb-4 text-black leading-tight"
+            class="text-[26px] md:text-[29px] lg:text-[38px] font-bold mb-4 text-[--color-new-black] leading-tight"
           >
             Welcome to EnerGlobix Agriculture
           </h2>
           <p
-            class="text-black leading-tight text-lg lg:text-[26px] mb-4 max-w-full lg:max-w-[90%] mx-auto"
+            class="text-[--color-new-black] leading-tight text-[17px] md:text-[21px] lg:text-[22px] mb-4 max-w-full lg:max-w-[90%] mx-auto"
           >
             Before capital moves, before markets expand, before industries
             scale, there is agriculture. It powers economies and supply chains,
@@ -243,7 +235,7 @@
           </p>
 
           <p
-            class="text-black leading-tight text-lg lg:text-[26px] max-w-full lg:max-w-[90%] mx-auto font-bold"
+            class="text-[--color-new-black] leading-tight text-[17px] md:text-[21px] lg:text-[22px] max-w-full lg:max-w-[90%] mx-auto"
           >
             EnerGlobix Agriculture - Sustaining everyday life, at scale.
           </p>
@@ -251,67 +243,60 @@
           <div class="mt-8 flex flex-col items-center justify-center">
             <a
               href="./who-we-are.html"
-              class="text-sm text-black font-bold mb-1"
+              class="text-lg text-[--color-new-black] font-bold"
               >Learn More</a
             >
             <img
               src="./assets/Links/arrow-black.svg"
               alt="arrow"
-              class="w-20 lg:w-30 transition-all duration-500 cursor-pointer"
+              class="w-[45px] mt-2 transition-all duration-500 cursor-pointer"
             />
           </div>
         </div>
 
         <div
-          class="grid grid-cols-3 md:grid-cols-6 w-full lg:w-[70%] gap-4 lg:gap-10 mt-10 mx-auto px-4"
+          class="grid grid-cols-3 md:grid-cols-6 w-full lg:w-[75%] gap-4 lg:gap-10 mt-10 mx-auto px-8"
         >
-          <div
-            class="aspect-square rounded-full circle-1 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-2 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-3 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-4 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-5 shadow-lg border-2 border-white"
-          ></div>
-          <div
-            class="aspect-square rounded-full circle-6 shadow-lg border-2 border-white"
-          ></div>
+          <div class="aspect-square rounded-full circle-1 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-2 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-3 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-4 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-5 shadow-lg"></div>
+          <div class="aspect-square rounded-full circle-6 shadow-lg"></div>
         </div>
 
         <div
           class="flex flex-wrap items-center gap-4 lg:gap-8 w-full justify-center mt-12 px-4"
         >
-          <span class="text-lg lg:text-xl font-bold text-black opacity-80"
+          <span
+            class="text-lg lg:text-xl font-bold text-[--color-agri-a] opacity-80"
             >Fertiliser</span
           >
-          <span class="text-lg lg:text-xl font-bold text-black opacity-80"
+          <span
+            class="text-lg lg:text-xl font-bold text-[--color-agri-a] opacity-80"
             >Wheat</span
           >
-          <span class="text-lg lg:text-xl font-bold text-black opacity-80"
+          <span
+            class="text-lg lg:text-xl font-bold text-[--color-agri-a] opacity-80"
             >Grain</span
           >
-          <span class="text-lg lg:text-xl font-bold text-black opacity-80"
+          <span
+            class="text-lg lg:text-xl font-bold text-[--color-agri-a] opacity-80"
             >Cooking</span
           >
-          <span class="text-lg lg:text-xl font-bold text-black opacity-80"
+          <span
+            class="text-lg lg:text-xl font-bold text-[--color-agri-a] opacity-80"
             >Oil</span
           >
         </div>
 
         <h1
-          class="mt-12 text-2xl lg:text-[30px] mx-auto max-w-full lg:max-w-[43%] text-center font-bold text-black leading-tight px-4"
+          class="mt-12 text-[26px] md:text-[29px] lg:text-[38px] mx-auto max-w-full lg:max-w-[60%] text-center font-bold text-[--color-new-black] leading-tight px-4"
         >
           Our supply and demand are global and so is our ability to deliver.
         </h1>
 
-        <div class="w-full mt-12 overflow-hidden px-4">
+        <div class="w-full lg:w-[75%] mx-auto mt-12 overflow-hidden px-4">
           <img
             src="./assets/Links/compressed-img/Agriculture Map.png"
             class="w-full h-auto object-contain mx-auto"
@@ -326,12 +311,12 @@
     >
       <div class="mb-12 lg:mb-1">
         <h1
-          class="text-2xl lg:text-[30px] font-bold mb-4 text-[#B8A685] text-center leading-tight"
+          class="text-[26px] md:text-[29px] lg:text-[38px] font-bold mb-4 text-[--color-beige-c] text-center leading-tight"
         >
           Our Core Commodities are Essential by Nature
         </h1>
         <p
-          class="text-white leading-tight text-lg lg:text-2xl mx-auto text-center w-full lg:max-w-[40%]"
+          class="text-white leading-normal text-[17px] md:text-[21px] lg:text-[22px] mx-auto text-center w-full lg:max-w-[40%]"
         >
           Our portfolio is focused on high-volume commodities that form the
           backbone of global supply:
@@ -343,7 +328,7 @@
       >
         <!-- CARD 1: Wheat -->
         <div
-          class="group shadow-xl shadow-black/5 overflow-hidden flex flex-col"
+          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
         >
           <div
             class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
@@ -358,17 +343,21 @@
               class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7"
             />
             <div
-              class="absolute inset-0 bg-black/10 z-20 transition-opacity"
+              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
             ></div>
           </div>
 
           <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-white rounded flex-1"
+            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
           >
-            <h3 class="text-2xl lg:text-3xl font-bold mb-2.5 text-black">
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-new-black]"
+            >
               Wheat
             </h3>
-            <p class="text-black mb-4 leading-[1.2] lg:leading-[1.1]">
+            <p
+              class="text-[--color-new-black] text-[17px] md:text-[18px] lg:text-[19px] mb-4 leading-normal"
+            >
               A Global Consumption Base. One of the most widely traded and
               consumed commodities worldwide.
             </p>
@@ -389,7 +378,7 @@
 
         <!-- CARD 2: Grain -->
         <div
-          class="group shadow-xl shadow-black/5 overflow-hidden flex flex-col"
+          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
         >
           <div
             class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
@@ -404,24 +393,28 @@
               class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
             />
             <div
-              class="absolute inset-0 bg-black/10 z-20 transition-opacity"
+              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
             ></div>
           </div>
 
           <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-white rounded flex-1"
+            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
           >
-            <h3 class="text-2xl lg:text-3xl font-bold mb-2.5 text-black">
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-new-black]"
+            >
               Grain
             </h3>
-            <p class="text-black mb-4 leading-[1.2] lg:leading-[1.1]">
+            <p
+              class="text-[--color-new-black] text-[17px] md:text-[18px] lg:text-[19px] mb-4 leading-normal"
+            >
               Foundational to Food and Industry. A core component in both human
               consumption and agricultural ecosystems.
             </p>
             <div>
               <a
                 href="./what-we-do.html"
-                class="text-sm text-[--color-agri-dark] font-bold mb-1 block hover:underline"
+                class="text-sm text-[--color-agri-a] font-bold mb-1 block hover:underline"
                 >Read more</a
               >
               <img
@@ -435,7 +428,7 @@
 
         <!-- CARD 3: Cooking Oil -->
         <div
-          class="group shadow-xl shadow-black/5 overflow-hidden flex flex-col"
+          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
         >
           <div
             class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
@@ -450,24 +443,28 @@
               class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
             />
             <div
-              class="absolute inset-0 bg-black/10 z-20 transition-opacity"
+              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
             ></div>
           </div>
 
           <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-white rounded flex-1"
+            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
           >
-            <h3 class="text-2xl lg:text-3xl font-bold mb-2.5 text-black">
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-new-black]"
+            >
               Cooking Oil
             </h3>
-            <p class="text-black mb-4 leading-[1.2] lg:leading-[1.1]">
+            <p
+              class="text-[--color-new-black] text-[17px] md:text-[18px] lg:text-[19px] mb-4 leading-normal"
+            >
               Daily Demand at Scale. A consistently consumed commodity across
               households and industries.
             </p>
             <div>
               <a
                 href="./what-we-do.html"
-                class="text-sm text-[--color-agri-dark] font-bold mb-1 block hover:underline"
+                class="text-sm text-[--color-agri-a] font-bold mb-1 block hover:underline"
                 >Read more</a
               >
               <img
@@ -481,7 +478,7 @@
 
         <!-- CARD 4: Fertilizer -->
         <div
-          class="group shadow-xl shadow-black/5 overflow-hidden flex flex-col"
+          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
         >
           <div
             class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
@@ -496,24 +493,28 @@
               class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
             />
             <div
-              class="absolute inset-0 bg-black/10 z-20 transition-opacity"
+              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
             ></div>
           </div>
 
           <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-white rounded flex-1"
+            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
           >
-            <h3 class="text-2xl lg:text-3xl font-bold mb-2.5 text-black">
+            <h3
+              class="text-2xl lg:text-3xl font-bold mb-2.5 text-[--color-new-black]"
+            >
               Fertilizer
             </h3>
-            <p class="text-black mb-4 leading-[1.2] lg:leading-[1.1]">
+            <p
+              class="text-[--color-new-black] text-[17px] md:text-[18px] lg:text-[19px] mb-4 leading-normal"
+            >
               Driving Agricultural Output. A critical input for global food
               production.
             </p>
             <div>
               <a
                 href="./what-we-do.html"
-                class="text-sm text-[--color-agri-dark] font-bold mb-1 block hover:underline"
+                class="text-sm text-[--color-agri-a] font-bold mb-1 block hover:underline"
                 >Read more</a
               >
               <img
@@ -528,12 +529,12 @@
 
       <div class="flex flex-col gap-6 pt-24 pb-10">
         <h1
-          class="text-2xl lg:text-[30px] font-bold text-[#B8A685] text-center leading-tight"
+          class="text-[26px] md:text-[29px] lg:text-[38px] font-bold text-[--color-beige-c] text-center leading-tight"
         >
           How We Do It
         </h1>
         <h4
-          class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center"
+          class="text-white leading-tight text-[17px] md:text-[21px] lg:text-[22px] mx-auto text-center w-full"
         >
           A Structured Global Supply Chain
         </h4>
@@ -541,16 +542,17 @@
     </section>
 
     <section
-      class="w-full bg-black grid grid-cols-1 lg:grid-cols-2 items-stretch"
+      class="w-full bg-[--color-new-black] grid grid-cols-1 lg:grid-cols-2 items-stretch"
     >
-      <div class="w-full split-left-img min-h-[500px] lg:min-h-0">
+      <div class="w-full min-h-[500px] lg:min-h-0 bg-[--color-beige-c]">
         <div
-          class="flex relative flex-col items-center gap-10 py-20 px-6 h-full w-full bg-[#B8A685]"
+          id="capabilities-container"
+          class="flex relative flex-col items-center gap-10 py-20 px-20 h-full w-full mx-auto"
         >
           <img src="./assets/Links/logo-mini-agri2.png" class="w-14" />
           <div class="flex flex-col items-center gap-8">
             <h4
-              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center w-full lg:max-w-[80%]"
+              class="text-white leading-tight text-xl lg:text-2xl mx-auto text-center w-full"
             >
               We operate across the full agricultural value chain from sourcing
               to delivery, ensuring continuity across markets that operate
@@ -558,12 +560,15 @@
             </h4>
 
             <h4
-              class="text-white leading-tight text-xl lg:text-2xl mx-auto font-bold text-center w-full lg:max-w-[80%]"
+              class="text-white leading-tight text-xl lg:text-2xl mx-auto font-bold text-center w-full"
             >
               Our capabilities include:
             </h4>
 
-            <ul class="flex flex-col gap-6 items-start lg:items-center w-full">
+            <ul
+              id="capabilities-list"
+              class="flex flex-col gap-6 items-start lg:items-center w-fit px-8 max-w-full"
+            >
               <li
                 class="text-white leading-none text-lg lg:text-[22px] text-center w-full flex items-center justify-center gap-3"
               >
@@ -608,7 +613,7 @@
       class="w-full min-h-screen bg-[--color-agri-dark] py-20 lg:py-28 px-6"
     >
       <h1
-        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[#B8A685] text-center leading-tight"
+        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[--color-beige-c] text-center leading-tight"
       >
         Contact us
       </h1>
@@ -617,24 +622,27 @@
         class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
       >
         <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-6 lg:gap-2">
+        <div class="flex flex-col gap-6 lg:gap-4">
           <div>
-            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-1">
               Office Location
             </h2>
-            <p class="text-gray-400 text-sm">Dubai, United Arab Emirates</p>
+            <p
+              class="text-[--color-beige-c] text-sm lg:text-base leading-relaxed"
+            >
+              Office 2704,<br />
+              Jumeirah Business<br />
+              Center 2 (JBC 2),<br />
+              JLT, Dubai, UAE
+            </p>
           </div>
           <div>
-            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
-              Address
-            </h2>
-            <p class="text-gray-400 text-sm">Business Bay, Dubai</p>
-          </div>
-          <div>
-            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-2">
+            <h2 class="text-white text-lg lg:text-[21px] font-medium mb-1">
               Contact
             </h2>
-            <p class="text-gray-400 text-sm">info@energlobix.com</p>
+            <p class="text-[--color-beige-c] text-sm lg:text-base">
+              info@energlobix.com
+            </p>
           </div>
         </div>
 
@@ -644,35 +652,35 @@
             <input
               type="text"
               placeholder="Name*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
             <input
               type="text"
               placeholder="Phone*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <input
               type="email"
               placeholder="Email*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
             <input
               type="text"
               placeholder="Company*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] text-sm rounded-[2px]"
+              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
             />
           </div>
           <input
             type="text"
             placeholder="Subject*"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
           />
           <textarea
             placeholder="Message*"
             rows="4"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[#B8A685] w-full text-sm rounded-[2px]"
+            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
           ></textarea>
           <button
             type="submit"
@@ -685,23 +693,25 @@
 
       <div class="w-full flex flex-col gap-10 items-center mt-24">
         <div class="flex flex-col gap-1">
-          <img src="./assets/Links/footer-img.png" class="w-32 sm:w-36" />
+          <img src="./assets/Links/logo.png" class="w-32 sm:w-36" />
         </div>
 
-        <h4 class="text-xl lg:text-[22px] text-[#B8A685]">
+        <h4 class="text-xl lg:text-[22px] text-[--color-beige-c]">
           Explore Our Businesses
         </h4>
 
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <h4 class="text-xs font-bold text-[#B8A685]">© EnerGlobix 2024</h4>
-          <div class="flex gap-8">
+        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+          <h4 class="text-xs md:text-sm font-bold text-[--color-beige-c]">
+            © EnerGlobix 2024
+          </h4>
+          <div class="flex gap-8 lg:gap-16">
             <h4
-              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+              class="text-xs md:text-sm font-bold text-[--color-beige-c] cursor-pointer hover:underline"
             >
               Terms of use
             </h4>
             <h4
-              class="text-xs font-bold text-[#B8A685] cursor-pointer hover:underline"
+              class="text-xs md:text-sm font-bold text-[--color-beige-c] cursor-pointer hover:underline"
             >
               Privacy policy
             </h4>
@@ -716,11 +726,34 @@
         const menu = document.getElementById("mobile-menu");
         menu.classList.toggle("hidden-menu");
       }
+
+      // Sync capabilities container width with its list
+      function syncCapabilitiesWidth() {
+        const list = document.getElementById("capabilities-list");
+        const container = document.getElementById("capabilities-container");
+        if (list && container) {
+          // Temporarily set to 100% to allow natural reflow
+          container.style.width = "100%";
+
+          const computedStyle = window.getComputedStyle(container);
+          const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
+          const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
+
+          // Set container width based on list width
+          container.style.width =
+            list.offsetWidth + paddingLeft + paddingRight + "px";
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", syncCapabilitiesWidth);
+      window.addEventListener("resize", syncCapabilitiesWidth);
+      // Also run after fonts and images are fully loaded
+      window.addEventListener("load", syncCapabilitiesWidth);
     </script>
 
     <!-- 
 GitHub Pages Asset Path Fixes:
-Original: /assets/Links/compressed-img/agri-hero.webp -> Fixed: ./assets/Links/compressed-img/agri-hero.webp\nOriginal: /assets/Links/compressed-img/agri-circle-2.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-2.webp\nOriginal: /assets/Links/compressed-img/agri-circle-3.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-3.webp\nOriginal: /assets/Links/compressed-img/agri-circle-4.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-4.webp\nOriginal: /assets/Links/compressed-img/agri-circle-5.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-5.webp\nOriginal: /assets/Links/compressed-img/agri-circle-6.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-6.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: assets/Links/arrow-black.svg -> Fixed: ./assets/Links/arrow-black.svg\nOriginal: /assets/Links/compressed-img/agri-card-1.webp -> Fixed: ./assets/Links/compressed-img/agri-card-1.webp\nOriginal: assets/Links/arrow-gold.svg -> Fixed: ./assets/Links/arrow-gold.svg\nOriginal: /assets/Links/compressed-img/agri-card-2.webp -> Fixed: ./assets/Links/compressed-img/agri-card-2.webp\nOriginal: /assets/Links/compressed-img/agri-card-3.webp -> Fixed: ./assets/Links/compressed-img/agri-card-3.webp\nOriginal: assets/Links/agri-card-4.jpg -> Fixed: ./assets/Links/agri-card-4.jpg
+Original: /assets/Links/compressed-img/agri-hero.webp -> Fixed: ./assets/Links/compressed-img/agri-hero.webp\nOriginal: /assets/Links/compressed-img/agri-circle-2.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-2.webp\nOriginal: /assets/Links/compressed-img/agri-circle-3.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-3.webp\nOriginal: /assets/Links/compressed-img/agri-circle-4.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-4.webp\nOriginal: /assets/Links/compressed-img/agri-circle-5.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-5.webp\nOriginal: /assets/Links/compressed-img/agri-circle-6.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-6.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: assets/Links/arrow-[--color-new-black].svg -> Fixed: ./assets/Links/arrow-[--color-new-black].svg\nOriginal: /assets/Links/compressed-img/agri-card-1.webp -> Fixed: ./assets/Links/compressed-img/agri-card-1.webp\nOriginal: assets/Links/arrow-gold.svg -> Fixed: ./assets/Links/arrow-gold.svg\nOriginal: /assets/Links/compressed-img/agri-card-2.webp -> Fixed: ./assets/Links/compressed-img/agri-card-2.webp\nOriginal: /assets/Links/compressed-img/agri-card-3.webp -> Fixed: ./assets/Links/compressed-img/agri-card-3.webp\nOriginal: assets/Links/agri-card-4.jpg -> Fixed: ./assets/Links/agri-card-4.jpg
 -->
     <script src="./navbar-scroll.js"></script>
   </body>

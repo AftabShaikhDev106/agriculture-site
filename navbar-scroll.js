@@ -20,11 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.add("bg-white", "shadow-md");
       }
       if (desktopMenu) {
-        desktopMenu.style.color = "black";
+        desktopMenu.style.color = "var(--color-new-black)";
       }
       if (mobileIcon) {
-        mobileIcon.classList.remove("text-white");
-        mobileIcon.classList.add("text-black");
+        mobileIcon.style.color = "var(--color-new-black)";
       }
     } else {
       if (header) {
@@ -34,8 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         desktopMenu.style.color = "white";
       }
       if (mobileIcon) {
-        mobileIcon.classList.remove("text-black");
-        mobileIcon.classList.add("text-white");
+        mobileIcon.style.color = "white";
       }
     }
   });
