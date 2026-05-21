@@ -1,735 +1,674 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agriculture | EnerGlobix Development</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EnerGlobix :: Home</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/Links/compressed-img/agri-hero.webp"
-    />
-    <style>
-      body {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-    </style>
-    <script>
-      window.addEventListener("load", () => {
-        document.body.style.visibility = "visible";
-        document.body.style.opacity = "1";
-      });
-    </script>
 
-    <style>
-      .hero-bg {
-        background-image: url("./assets/Links/compressed-img/agri-hero.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .circle-1 {
-        background-image: url("./assets/Links/compressed-img/agri-hero.webp");
-        background-size: 350%;
-        background-position: 75% 50%;
-        background-repeat: no-repeat;
-      }
-
-      .circle-2 {
-        background-image: url("./assets/Links/compressed-img/agri-circle-2.webp");
-        background-size: 170%;
-        background-position: 30% 50%;
-        background-repeat: no-repeat;
-      }
-
-      .circle-3 {
-        background-image: url("./assets/Links/compressed-img/agri-circle-3.webp");
-        background-size: 260%;
-        background-position: 30% top;
-        background-repeat: no-repeat;
-      }
-
-      .circle-4 {
-        background-image: url("./assets/Links/compressed-img/agri-circle-4.webp");
-        background-size: 350%;
-        background-position: 75% bottom;
-        background-repeat: no-repeat;
-      }
-
-      .circle-5 {
-        background-image: url("./assets/Links/compressed-img/agri-circle-5.webp");
-        background-size: 200%;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .circle-6 {
-        background-image: url("./assets/Links/compressed-img/agri-circle-6.webp");
-        background-size: 350%;
-        background-position: 20% bottom;
-        background-repeat: no-repeat;
-      }
-
-      .circle-img {
-        background-image: url("./assets/Links/compressed-img/circle-img-1.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .split-right-img {
-        background-image: url("./assets/Links/compressed-img/agri-right-img.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .split-left-img {
-        background-image: url("./assets/Links/compressed-img/agri-right-img.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      /* Mobile menu transition */
-      #mobile-menu {
-        transition: transform 0.3s ease-in-out;
-      }
-      #mobile-menu.hidden-menu {
-        transform: translateX(100%);
-      }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/local.css" />
   </head>
-  <body class="bg-white text-gray-900 overflow-x-hidden">
-    <!-- Navbar -->
 
-    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
-      <nav
-        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
-      >
-        <a href="./index.html">
-          <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
-        </a>
-
-        <div class="flex items-center gap-6 lg:gap-14">
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./who-we-are.html">Who We Are</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./what-we-do.html">What We Do</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./how-we-do-it.html">How We Do it</a>
-            </li>
-          </ul>
-
-          <i
-            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
-            onclick="toggleMenu()"
-          ></i>
-        </div>
-      </nav>
-
-      <!-- Mobile Menu Overlay -->
-      <div
-        id="mobile-menu"
-        class="fixed inset-0 bg-[--color-new-black] z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
-      >
-        <i
-          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
-          onclick="toggleMenu()"
-        ></i>
-        <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
-        <ul class="flex flex-col items-center gap-8">
-          <li class="cursor-pointer">
-            <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./how-we-do-it.html" onclick="toggleMenu()"
-              >How We Do it</a
-            >
-          </li>
-          <li class="cursor-pointer">
-            <a href="./invest.html" onclick="toggleMenu()">Invest</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-
-    <section
-      class="min-h-[125vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
-    >
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div
-        class="relative z-10 w-full flex items-center justify-center px-6 pt-20 pb-36 lg:pb-52"
-      >
-        <div class="max-w-5xl w-full">
-          <h4 class="text-white text-center hero-title">
-            EnerGlobix Agriculture
-          </h4>
-          <h4 class="text-white text-center hero-title">
-            Sustaining everyday life
-          </h4>
-          <div class="flex flex-col items-center">
-            <h4 class="mt-8 description-link text-white font-bold text-center">
-              Explore our vision
-            </h4>
-            <a href="#second-section" class="block">
-              <img
-                src="./assets/Links/arrow.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </a>
-          </div>
+  <body>
+    <!-- Loader -->
+    <div id="loader" style="height: 100vh;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section
-      id="second-section"
-      class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
-    >
-      <div
-        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-[--color-beige-dark] rounded-[100%]"
-      ></div>
-
-      <div class="relative z-20 pt-20 pb-20 lg:pt-28 lg:pb-28 px-6 md:px-12">
-        <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
-          <h2
-            class="common-heading font-bold mb-3 text-[--color-new-black] leading-tight"
+    <div id="main-content" style="display: none;">
+      <div class="navbar-container">
+        <div class="energlobix__navbar">
+          <a href="index.html">
+            <img src="assets/Links/logo.png" alt="" class="logo" />
+          </a>
+          <button
+            class="nav-toggle"
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle navigation"
           >
-            Welcome to EnerGlobix Agriculture
-          </h2>
-          <p
-            class="text-[--color-new-black] common-description mb-3 max-w-full mx-auto"
-          >
-            Before capital moves, before markets expand, before industries
-            scale,<br class="hide-on-mobile" />
-            there is agriculture. It powers economies and supply chains,
-            every<br class="hide-on-mobile" />
-            day. It is constant, essential, and globally demanded. At
-            EnerGlobix<br class="hide-on-mobile" />
-            Agriculture, we operate within this foundation, positioned at the<br
-              class="hide-on-mobile"
-            />
-            intersection of global supply, infrastructure, and long-term demand.
-          </p>
+            &#9776;
+          </button>
 
-          <p
-            class="text-[--color-new-black] common-description max-w-full mx-auto"
-          >
-            EnerGlobix Agriculture - Sustaining everyday life, at scale.
-          </p>
-
-          <div class="mt-6 flex flex-col items-center justify-center">
-            <a
-              href="./who-we-are.html"
-              class="description-link text-[--color-new-black] font-bold"
-              >Learn More</a
-            >
-            <img
-              src="./assets/Links/arrow-black.svg"
-              alt="arrow"
-              class="explore-arrow transition-all duration-500 cursor-pointer"
-            />
-          </div>
-        </div>
-
-        <div
-          class="grid grid-cols-3 md:grid-cols-6 w-full lg:w-[75%] gap-4 lg:gap-10 mt-10 mx-auto px-8"
-        >
-          <div class="aspect-square rounded-full circle-1 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-2 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-3 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-4 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-5 shadow-lg"></div>
-          <div class="aspect-square rounded-full circle-6 shadow-lg"></div>
-        </div>
-
-        <div
-          class="flex flex-wrap items-center gap-4 lg:gap-8 w-full justify-center mt-8 px-4"
-        >
-          <span class="card-desc font-bold text-[--color-agri-a] opacity-80"
-            >Fertiliser</span
-          >
-          <span class="card-desc font-bold text-[--color-agri-a] opacity-80"
-            >Wheat</span
-          >
-          <span class="card-desc font-bold text-[--color-agri-a] opacity-80"
-            >Grain</span
-          >
-          <span class="card-desc font-bold text-[--color-agri-a] opacity-80"
-            >Cooking</span
-          >
-          <span class="card-desc font-bold text-[--color-agri-a] opacity-80"
-            >Oil</span
-          >
-        </div>
-
-        <h1
-          class="mt-8 common-heading mx-auto max-w-full text-center font-bold text-[--color-new-black] leading-tight px-4"
-        >
-          Our supply and demand are global and so <br class="hide-on-mobile" />
-          is our ability to deliver.
-        </h1>
-
-        <div class="w-full lg:w-[75%] mx-auto mt-12 overflow-hidden px-4">
-          <img
-            src="./assets/Links/compressed-img/Agriculture Map.png"
-            class="w-full h-auto object-contain mx-auto"
-            alt="World Map"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="w-full min-h-screen bg-[--color-agri-dark] -mt-[140px] pt-[220px] pb-20 lg:pt-[252px] lg:pb-28 flex flex-col justify-center px-6"
-    >
-      <div class="mb-12 lg:mb-1">
-        <h1
-          class="common-heading font-bold mb-3 text-[--color-beige-c] text-center leading-tight"
-        >
-          Our Core Commodities are Essential by Nature
-        </h1>
-        <p
-          class="text-white leading-normal common-description mx-auto text-center w-full"
-        >
-          Our portfolio is focused on high-volume commodities that form
-          <br class="hide-on-mobile" />
-          the backbone of global supply:
-        </p>
-      </div>
-
-      <div
-        class="w-full lg:max-w-[95%] xl:max-w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14"
-      >
-        <!-- CARD 1: Wheat -->
-        <div
-          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-        >
-          <div
-            class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
-          >
-            <img
-              src="./assets/Links/compressed-img/agri-card-1.webp"
-              alt="Wheat"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-            />
-            <img
-              src="./assets/Links/logo-mini-agri.png"
-              class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-            />
-            <div
-              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-            ></div>
+          <div class="navlinks">
+            <ul>
+              <a href="who-we-are.html"><li>Who We Are</li></a>
+              <a href="what-we-do.html"><li>What We Do</li></a>
+              <a href="how-we-do-it.html"><li>How We Do it</li></a>
+            </ul>
           </div>
 
-          <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-          >
-            <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-              Wheat
-            </h3>
-            <p class="text-[--color-new-black] card-desc mb-3">
-              A Global Consumption Base. One of the most widely traded and
-              consumed commodities worldwide.
-            </p>
-            <div>
-              <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
-              >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 2: Grain -->
-        <div
-          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-        >
-          <div
-            class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
-          >
-            <img
-              src="./assets/Links/compressed-img/agri-card-2.webp"
-              alt="Grain"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-            />
-            <img
-              src="./assets/Links/logo-mini-agri.png"
-              class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-            />
-            <div
-              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-            ></div>
-          </div>
-
-          <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-          >
-            <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-              Grain
-            </h3>
-            <p class="text-[--color-new-black] card-desc mb-3">
-              Foundational to Food and Industry. A core component in both human
-              consumption and agricultural ecosystems.
-            </p>
-            <div>
-              <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
-              >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 3: Cooking Oil -->
-        <div
-          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-        >
-          <div
-            class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
-          >
-            <img
-              src="./assets/Links/compressed-img/agri-card-3.webp"
-              alt="Cooking Oil"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-            />
-            <img
-              src="./assets/Links/logo-mini-agri.png"
-              class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-            />
-            <div
-              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-            ></div>
-          </div>
-
-          <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-          >
-            <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-              Cooking Oil
-            </h3>
-            <p class="text-[--color-new-black] card-desc mb-3">
-              Daily Demand at Scale. A consistently consumed commodity across
-              households and industries.
-            </p>
-            <div>
-              <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
-              >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 4: Fertilizer -->
-        <div
-          class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-        >
-          <div
-            class="relative w-[95%] aspect-[4/2.8] mt-10 mx-auto rounded -mb-10 z-10"
-          >
-            <img
-              src="./assets/Links/compressed-img/agri-card-4.webp"
-              alt="Fertilizer"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-            />
-            <img
-              src="./assets/Links/logo-mini-agri.png"
-              class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-            />
-            <div
-              class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-            ></div>
-          </div>
-
-          <div
-            class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-          >
-            <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-              Fertilizer
-            </h3>
-            <p class="text-[--color-new-black] card-desc mb-3">
-              Driving Agricultural Output. A critical input for global food
-              production.
-            </p>
-            <div>
-              <a
-                href="./what-we-do.html"
-                class="description-link text-[--color-agri-a] font-bold block hover:underline"
-                >Read more</a
-              >
-              <img
-                src="./assets/Links/arrow-gold.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-3 pt-24 pb-10">
-        <h1
-          class="common-heading font-bold text-[--color-beige-c] text-center leading-tight"
-        >
-          How We Do It
-        </h1>
-        <h4
-          class="text-white leading-tight common-description mx-auto text-center w-full"
-        >
-          A Structured Global Supply Chain
-        </h4>
-      </div>
-    </section>
-
-    <section
-      class="w-full bg-[--color-new-black] grid grid-cols-1 lg:grid-cols-2 items-stretch"
-    >
-      <div class="w-full min-h-[500px] lg:min-h-0 bg-[--color-beige-c]">
-        <div
-          id="capabilities-container"
-          class="flex relative flex-col items-center gap-10 py-20 lg:py-28 px-6 md:px-12 lg:px-20 h-full w-full mx-auto"
-        >
-          <img src="./assets/Links/logo-mini-agri2.png" class="w-14" />
-          <div class="flex flex-col items-center gap-3">
-            <h4
-              class="text-white common-description mx-auto text-center w-full"
-            >
-              We operate across the full agricultural value chain from sourcing
-              to delivery, ensuring continuity across markets that operate
-              without pause.
-            </h4>
-
-            <h4
-              class="text-white common-description mx-auto font-bold text-center w-full"
-            >
-              Our capabilities include:
-            </h4>
-
-            <ul
-              id="capabilities-list"
-              class="flex flex-col gap-3 items-start lg:items-center w-fit px-8 max-w-full"
-            >
-              <li
-                class="text-white leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-white"
-                ></span>
-                Direct sourcing from established producers
+          <div class="navlinks-mobile">
+            <ul>
+              <li>
+                <a href="who-we-are.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    Who We Are
+                  </div>
+                </a>
               </li>
-              <li
-                class="text-white leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-white"
-                ></span>
-                Coordination of high-volume shipments
+              <li>
+                <a href="what-we-do.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    What We Do
+                  </div>
+                </a>
               </li>
-              <li
-                class="text-white leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-white"
-                ></span>
-                International transportation and trade flows
-              </li>
-              <li
-                class="text-white leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-white"
-                ></span>
-                Distribution into demand-driven markets
+              <li>
+                <a href="how-we-do-it.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    How We Do it
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="w-full h-64 lg:h-auto py-28 split-right-img"></div>
-    </section>
 
-    <section
-      id="section-contact"
-      class="w-full min-h-screen bg-[--color-agri-dark] py-20 lg:py-28 px-6"
-    >
-      <h1
-        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[--color-beige-c] text-center leading-tight"
-      >
-        Contact us
-      </h1>
+      <div class="hero-slider-section">
+        <div
+          class="slide active"
+          style="
+            background-image: url('assets/Links/compressed-img/agri-hero.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+          "
+        >
+          <div class="hero-content-wrapper">
+            <div class="hero-mid-section">
+              <img
+                class="single-logo-transparent"
+                src="assets/images/single-logo-transparent.png"
+                alt=""
+              />
+              <div class="hero-mid-section-content">
+                <div class="hero-title">EnerGlobix Agriculture</div>
+                <div class="hero-title">Sustaining everyday life</div>
+              </div>
+            </div>
 
-      <div
-        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
-      >
-        <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-3">
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">
-              Office Location
-            </h2>
-            <p class="text-[--color-beige-c] description-link">
-              Office 2704,<br />
-              Jumeirah Business<br />
-              Center 2 (JBC 2),<br />
-              JLT, Dubai, UAE
-            </p>
-          </div>
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">Contact</h2>
-            <p class="text-[--color-beige-c] description-link">
-              info@energlobix.com
-            </p>
+            <div class="hero-lower-section">
+              <div class="">
+                <a class="energlobix__links" href="#about-us">
+                  <div class="energlobix__links">Explore our vision</div>
+                  <img src="assets/Links/arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Right Side: Form -->
-        <form action="#" class="flex flex-col gap-3">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="text"
-              placeholder="Name*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Phone*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
+      <!-- About Section -->
+      <div class="about-section" style="background-position: top;">
+        <div
+          class="curve-overlay position-absolute top-0 start-50 translate-middle-x bg-gold-color z-1"
+        ></div>
+
+        <div id="about-us" class="oval-container">
+          <div class="energlobix__title text-center text-black font-bold">
+            Welcome to EnerGlobix Agriculture
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="email"
-              placeholder="Email*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Company*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Subject*"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          />
-          <textarea
-            placeholder="Message*"
-            rows="4"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+
+          <div
+            class="container energlobix__text mt-3 text-center text-[--black-color]"
           >
-            Send Message
-          </button>
-        </form>
-      </div>
+            Before capital moves, before markets expand, before industries
+            scale,
 
-      <div class="w-full flex flex-col gap-10 items-center mt-24">
-        <div class="flex flex-col gap-1">
-          <img src="./assets/Links/logo.png" class="w-32 sm:w-36" />
-        </div>
+            <br class="hide-on-mobile" />
+            there is agriculture. It powers economies and supply chains, every
 
-        <h4 class="common-description text-[--color-beige-c]">
-          Explore Our Businesses
-        </h4>
+            <br class="hide-on-mobile" />
+            day.It is constant, essential, and globally demanded. At EnerGlobix
+            <br class="hide-on-mobile" />
+            Agriculture, we operate within this foundation, positioned at the
+            <br class="hide-on-mobile" />
+            intersection of global supply, infrastructure, and long-term demand.
+          </div>
 
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <h4 class="text-xs md:text-sm font-bold text-[--color-beige-c]">
-            © EnerGlobix 2024
-          </h4>
-          <div class="flex gap-8 lg:gap-16">
-            <h4
-              class="text-xs md:text-sm font-bold text-[--color-beige-c] cursor-pointer hover:underline"
+          <div
+            class="container energlobix__text mt-3 text-center text-[--black-color]"
+          >
+            EnerGlobix Agriculture - Sustaining everyday life, at scale.
+          </div>
+
+          <div class="mt-3">
+            <a class="energlobix__links text-black" href="whoweare.html"
+              >Learn More</a
             >
-              Terms of use
-            </h4>
-            <h4
-              class="text-xs md:text-sm font-bold text-[--color-beige-c] cursor-pointer hover:underline"
+          </div>
+
+          <a href="whoweare.html"
+            ><img class="mt-1" src="assets/Links/arrow-black.svg" alt=""
+          /></a>
+          <div class="container mt-3">
+            <div
+              class="d-flex justify-content-center align-items-center flex-wrap gap-2 gap-md-3 gap-lg-4"
             >
-              Privacy policy
-            </h4>
+              <div class="circle-placeholder circle-1"></div>
+              <div class="circle-placeholder circle-2"></div>
+              <div class="circle-placeholder circle-3"></div>
+              <div class="circle-placeholder circle-4"></div>
+              <div class="circle-placeholder circle-5"></div>
+              <div class="circle-placeholder circle-6"></div>
+            </div>
+
+            <div
+              class="container energlobix__text text-center text-light-green fw-bold d-flex justify-content-center flex-wrap gap-3 gap-md-4 mt-4"
+            >
+              <span>Fertiliser</span>
+              <span>Wheat</span>
+              <span>Grain</span>
+              <span>Cooking Oil</span>
+            </div>
+
+            <div
+              class="energlobix__title text-center text-black font-bold my-4"
+            >
+              Our supply and demand are global and so
+              <br class="hide-on-mobile" />
+              is our ability to deliver.
+            </div>
+
+            <div class="map-container-align mx-auto">
+              <img
+                class="w-100 img-fluid"
+                src="assets/Links/compressed-img/Agriculture Map.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- How we do it Section -->
+      <div class="green-section">
+        <div id="commodities" class="commodities-section">
+          <div class="energlobix__title text-center text-gold font-bold">
+            Our Core Commodities are Essential by Nature
+          </div>
+
+          <div class="container energlobix__text mt-3 text-center text-white">
+            Our portfolio is focused on high-volume commodities that
+            <br class="hide-on-mobile" />
+            form the backbone of global supply:
+          </div>
+
+          <div class="row my-5">
+            <div
+              id="Purpose-and-Values"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2"
+                    src="assets/Links/compressed-img/agri-card-1.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Wheat
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    A Global Consumption Base One of the most widely traded and
+                    consumed commodities worldwide.
+                  </div>
+                  <div class="mt-3">
+                    <a
+                      class="energlobix__links text-gold"
+                      href="whatwedo.html#TC1-Aviation-Fuel"
+                      >Read More</a
+                    >
+                  </div>
+                  <img
+                    src="assets/Links/arrow-gold.svg"
+                    class="read-more-arrow2 mt-1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="Vision-and-Mission"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2"
+                    src="assets/Links/compressed-img/agri-card-2.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Grain
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Foundational to Food and Industry. A core component in both
+                    human consumption and agricultural ecosystems.
+                  </div>
+                  <div class="mt-3">
+                    <a
+                      class="energlobix__links text-gold"
+                      href="whatwedo.html#TC1-Aviation-Fuel"
+                      >Read More</a
+                    >
+                  </div>
+                  <img
+                    src="assets/Links/arrow-gold.svg"
+                    class="read-more-arrow2 mt-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              id="Purpose-and-Values"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2"
+                    src="assets/Links/compressed-img/agri-card-3.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Cooking Oil
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Daily Demand at Scale. A consistently consumed commodity
+                    across households and industries.
+                  </div>
+                  <div class="mt-3">
+                    <a
+                      class="energlobix__links text-gold"
+                      href="whatwedo.html#TC1-Aviation-Fuel"
+                      >Read More</a
+                    >
+                  </div>
+                  <img
+                    src="assets/Links/arrow-gold.svg"
+                    class="read-more-arrow2 mt-1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="Vision-and-Mission"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2"
+                    src="assets/Links/compressed-img/agri-card-4.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Fertilizer
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Driving Agricultural Output A critical input for global food
+                    production.
+                  </div>
+                  <div class="mt-3">
+                    <a
+                      class="energlobix__links text-gold"
+                      href="whatwedo.html#TC1-Aviation-Fuel"
+                      >Read More</a
+                    >
+                  </div>
+                  <img
+                    src="assets/Links/arrow-gold.svg"
+                    class="read-more-arrow2 mt-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <!-- Row 1 -->
+
+          <div
+            id="Employees"
+            class="col-lg-6 col-sm-12 insights-box"
+            style="
+              background: linear-gradient(
+                  rgba(184, 166, 133, 0.85),
+                  rgba(184, 166, 133, 0.85)
+                ),
+                url('assets/Links/compressed-img/split-right-cropped.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            "
+          >
+            <div class="text-center mb-3">
+              <img
+                src="assets/Links/logo-mini-agri2.png"
+                alt=""
+                class="default-logo-size"
+              />
+            </div>
+
+            <div class="energlobix__text text-white text-center mt-3">
+              We operate across the full agricultural value
+              <br class="hide-on-mobile" />
+              chainfrom sourcing to delivery ensuring continuity across
+              <br class="hide-on-mobile" />
+              markets that operate without pause.
+            </div>
+
+            <div
+              class="energlobix__text text-white text-center mt-3"
+              style="font-weight: bold;"
+            >
+              Our capabilities include:
+            </div>
+            <ul
+              class="energlobix__text text-white mt-3 list-unstyled"
+              style="
+                text-align: center;
+                padding-left: 20px;
+                list-style: none !important;
+                margin-bottom: 0 !important;
+              "
+            >
+              <li class="mb-3">• Direct sourcing from established producers</li>
+              <li class="mb-3">• Coordination of high-volume shipments</li>
+              <li class="mb-3">
+                • International transportation and trade flows
+              </li>
+
+              <li>
+                • Distribution into demand-driven markets
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="col-lg-6 col-sm-12 insights-box d-none d-lg-block d-xl-block"
+            style="
+              background-image: url('assets/Links/compressed-img/agri-right-img\ 1.png');
+              background-size: cover;
+            "
+          ></div>
+
+          <div
+            class="col-lg-6 col-sm-12 insights-box d-block d-lg-none"
+            style="
+              background-image: url('assets/Links/compressed-img/agri-right-img\ 1.png');
+              background-size: cover;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <section
+        id="section-contact"
+        class="bg-dark-green"
+        style="padding-top: 120px; padding-bottom: 100px; min-height: 100vh;"
+      >
+        <div class="container contact-container">
+          <!-- Heading -->
+          <h1
+            class="energlobix__title text-center text-gold"
+            style="font-weight: bold;"
+          >
+            Contact us
+          </h1>
+
+          <!-- Main Row -->
+          <div class="contact-layout">
+            <!-- LEFT -->
+            <div class="contact-info">
+              <div class="mb-5">
+                <h2 class="contact-side-title">
+                  Office Location
+                </h2>
+
+                <p class="contact-side-text">
+                  Office 2704,<br />
+                  Jumeirah Business Center 2 (JBC 2),<br />
+                  JLT, Dubai, UAE
+                </p>
+              </div>
+
+              <div>
+                <h2 class="contact-side-title">
+                  Contact
+                </h2>
+
+                <p class="contact-side-text">
+                  info@energlobix.com
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="contact-form-wrapper">
+              <div class="form-grid">
+                <input type="text" placeholder="Name*" class="custom-input" />
+
+                <input type="text" placeholder="Phone*" class="custom-input" />
+
+                <input type="email" placeholder="Email*" class="custom-input" />
+
+                <input
+                  type="text"
+                  placeholder="Company*"
+                  class="custom-input"
+                />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Subject*"
+                class="custom-input subject-input"
+              />
+
+              <textarea
+                placeholder="Message*"
+                class="custom-input custom-textarea"
+              ></textarea>
+
+              <button type="submit" class="contact-btn">
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="contact-footer">
+            <img src="./assets/Links/logo.png" class="footer-logo" alt="" />
+
+            <h3 class="footer-subtitle">
+              Explore Our Businesses
+            </h3>
+
+            <div class="footer-links-wrapper">
+              <h4 class="footer-link-text">
+                © EnerGlobix 2024
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Terms of use
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Privacy policy
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript -->
+    <script src="assets/js/script.js"></script>
 
     <script>
-      // Mobile Menu Toggle
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden-menu");
-      }
+      // Wait until the entire page is loaded
+      window.addEventListener("load", function () {
+        // Hide the loader
+        document.getElementById("loader").style.display = "none";
+        // Show the main content
+        document.getElementById("main-content").style.display = "block";
+        // Show message in console
+        console.log("Content is loaded");
+      });
 
-      // Sync capabilities container width with its list
-      function syncCapabilitiesWidth() {
-        const list = document.getElementById("capabilities-list");
-        const container = document.getElementById("capabilities-container");
-        if (list && container) {
-          // Temporarily set to 100% to allow natural reflow
-          container.style.width = "100%";
+      // Accordion Functionality
+      function toggleAccordion(item) {
+        const content = item.querySelector(".approach-accordion-body");
+        const isOpen = item.getAttribute("data-open") === "true";
 
-          const computedStyle = window.getComputedStyle(container);
-          const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
-          const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
+        // Close other items
+        document
+          .querySelectorAll(".approach-accordion-item")
+          .forEach((other) => {
+            if (other !== item) {
+              other.setAttribute("data-open", "false");
+              const otherBody = other.querySelector(".approach-accordion-body");
+              if (otherBody) {
+                otherBody.style.maxHeight = "0";
+                otherBody.style.opacity = "0";
+              }
+              const otherIcon = other.querySelector(".approach-accordion-icon");
+              if (otherIcon) {
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            }
+          });
 
-          // Set container width based on list width
-          container.style.width =
-            list.offsetWidth + paddingLeft + paddingRight + "px";
+        const icon = item.querySelector(".approach-accordion-icon");
+        if (isOpen) {
+          item.setAttribute("data-open", "false");
+          if (content) {
+            content.style.maxHeight = "0";
+            content.style.opacity = "0";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(0deg)";
+          }
+        } else {
+          item.setAttribute("data-open", "true");
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(90deg)";
+          }
         }
       }
 
-      window.addEventListener("DOMContentLoaded", syncCapabilitiesWidth);
-      window.addEventListener("resize", syncCapabilitiesWidth);
-      // Also run after fonts and images are fully loaded
-      window.addEventListener("load", syncCapabilitiesWidth);
-    </script>
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.querySelector(".navlinks-mobile");
+        menu.classList.toggle("active");
+      }
 
-    <!-- 
-GitHub Pages Asset Path Fixes:
-Original: /assets/Links/compressed-img/agri-hero.webp -> Fixed: ./assets/Links/compressed-img/agri-hero.webp\nOriginal: /assets/Links/compressed-img/agri-circle-2.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-2.webp\nOriginal: /assets/Links/compressed-img/agri-circle-3.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-3.webp\nOriginal: /assets/Links/compressed-img/agri-circle-4.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-4.webp\nOriginal: /assets/Links/compressed-img/agri-circle-5.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-5.webp\nOriginal: /assets/Links/compressed-img/agri-circle-6.webp -> Fixed: ./assets/Links/compressed-img/agri-circle-6.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: assets/Links/arrow-[--color-new-black].svg -> Fixed: ./assets/Links/arrow-[--color-new-black].svg\nOriginal: /assets/Links/compressed-img/agri-card-1.webp -> Fixed: ./assets/Links/compressed-img/agri-card-1.webp\nOriginal: assets/Links/arrow-gold.svg -> Fixed: ./assets/Links/arrow-gold.svg\nOriginal: /assets/Links/compressed-img/agri-card-2.webp -> Fixed: ./assets/Links/compressed-img/agri-card-2.webp\nOriginal: /assets/Links/compressed-img/agri-card-3.webp -> Fixed: ./assets/Links/compressed-img/agri-card-3.webp\nOriginal: assets/Links/agri-card-4.jpg -> Fixed: ./assets/Links/agri-card-4.jpg
--->
-    <script src="./navbar-scroll.js"></script>
+      // Dynamic padding logic for accordion div
+      document.addEventListener("DOMContentLoaded", () => {
+        const approachAccordion = document.getElementById("approach-accordion");
+        const sectionApproachInner = document.getElementById(
+          "section-approach-inner"
+        );
+        const sectionSignature = document.getElementById("section-signature");
+
+        if (approachAccordion && sectionApproachInner && sectionSignature) {
+          const adjustOverlapPadding = () => {
+            const isMobile = window.innerWidth < 1024;
+            const gap = 112; // 28 in tailwind unit
+            const topOffset = isMobile ? 100 : 140; // matches -mt-[100px] and -mt-[140px]
+
+            // We don't add halfHeight because the accordion is not absolute
+            sectionApproachInner.style.paddingBottom = `${gap}px`;
+            sectionSignature.style.paddingTop = `${topOffset + gap}px`;
+          };
+
+          const resizeObserver = new ResizeObserver(() => {
+            adjustOverlapPadding();
+          });
+
+          resizeObserver.observe(approachAccordion);
+          window.addEventListener("resize", adjustOverlapPadding);
+
+          // Initial calculation
+          setTimeout(adjustOverlapPadding, 100);
+        }
+      });
+    </script>
   </body>
 </html>

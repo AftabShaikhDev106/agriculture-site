@@ -1,647 +1,618 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What We Do | EnerGlobix</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EnerGlobix :: Home</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/Links/compressed-img/agriculture-img/agriculture-img4.webp"
-    />
-    <style>
-      body {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-    </style>
-    <script>
-      window.addEventListener("load", () => {
-        document.body.style.visibility = "visible";
-        document.body.style.opacity = "1";
-      });
-    </script>
-    <style>
-      .hero-bg {
-        background-image: url("./assets/Links/compressed-img/agriculture-img/agriculture-img4.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
 
-      .circle-img {
-        background-image: url("./assets/Links/compressed-img/circle-img-1.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .split-right-img {
-        background-image: url("./assets/Links/compressed-img/agriculture-img/wheat-img.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .split-left-img {
-        background-image: url("./assets/Links/compressed-img/how-split-img.webp");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      .empty-img-light {
-        background-image: url("./assets/Links/compressed-img/worldmap-empty-light.png");
-        background-size: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      /* Mobile menu transition */
-      #mobile-menu {
-        transition: transform 0.3s ease-in-out;
-      }
-      #mobile-menu.hidden-menu {
-        transform: translateX(100%);
-      }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/local.css" />
   </head>
-  <body class="bg-white text-gray-900 overflow-x-hidden">
-    <!-- Navbar -->
 
-    <header class="fixed top-0 left-0 w-full z-50" id="main-header">
-      <nav
-        class="max-w-7xl mx-auto py-4 lg:py-8 px-6 flex items-center justify-between"
-      >
-        <a href="./index.html">
-          <img src="./assets/Links/logo.png" alt="logo" class="w-28 lg:w-36" />
-        </a>
-
-        <div class="flex items-center gap-6 lg:gap-14">
-          <!-- Desktop Menu -->
-          <ul class="hidden lg:flex gap-14 text-[15px] font-medium text-white">
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./who-we-are.html">Who We Are</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./what-we-do.html" class="active-link">What We Do</a>
-            </li>
-            <li
-              class="cursor-pointer hover:text-[--color-beige-c] transition-colors"
-            >
-              <a href="./how-we-do-it.html">How We Do it</a>
-            </li>
-          </ul>
-
-          <i
-            class="fa-solid fa-bars text-xl cursor-pointer text-white lg:hidden"
-            onclick="toggleMenu()"
-          ></i>
+  <body>
+    <!-- Loader -->
+    <div id="loader" style="height: 100vh;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
         </div>
-      </nav>
-
-      <!-- Mobile Menu Overlay -->
-      <div
-        id="mobile-menu"
-        class="fixed inset-0 bg-[--color-new-black] z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-medium text-white hidden-menu lg:hidden"
-      >
-        <i
-          class="fa-solid fa-xmark absolute top-8 right-8 text-3xl cursor-pointer"
-          onclick="toggleMenu()"
-        ></i>
-        <img src="./assets/Links/logo.png" alt="logo" class="w-40 mb-10" />
-        <ul class="flex flex-col items-center gap-8">
-          <li class="cursor-pointer">
-            <a href="./who-we-are.html" onclick="toggleMenu()">Who We Are</a>
-          </li>
-          <li class="cursor-pointer">
-            <a href="./how-we-do-it.html" onclick="toggleMenu()"
-              >How We Do it</a
-            >
-          </li>
-          <li class="cursor-pointer">
-            <a href="./invest.html" onclick="toggleMenu()">Invest</a>
-          </li>
-        </ul>
       </div>
-    </header>
+    </div>
 
-    <section
-      class="min-h-[125vh] w-full bg-[#111] hero-bg relative flex items-center justify-center"
-    >
-      <!-- <div
-        class="absolute inset-0 bg-gradient-to-b from-[--color-new-black]/30 to-[--color-new-black]/100"
-      ></div> -->
-      <div
-        class="relative z-10 w-full flex items-center justify-center px-6 pt-20 pb-36 lg:pb-52"
-      >
-        <div class="max-w-5xl w-full">
-          <h4 class="text-white text-center hero-title">
-            EnerGlobix Agriculture
-          </h4>
-          <h4 class="text-white text-center hero-title">
-            Driven by purpose - delivered in bulk
-          </h4>
-          <div class="flex flex-col items-center">
-            <h4 class="mt-8 description-link text-white font-bold text-center">
-              Explore our vision
-            </h4>
-            <a href="#second-section" class="block">
-              <img
-                src="./assets/Links/arrow.svg"
-                alt="arrow"
-                class="explore-arrow transition-all duration-500 cursor-pointer"
-              />
-            </a>
+    <div id="main-content" style="display: none;">
+      <div class="navbar-container">
+        <div class="energlobix__navbar">
+          <a href="index.html">
+            <img src="assets/Links/logo.png" alt="" class="logo" />
+          </a>
+          <button
+            class="nav-toggle"
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle navigation"
+          >
+            &#9776;
+          </button>
+
+          <div class="navlinks">
+            <ul>
+              <a href="who-we-are.html"><li>Who We Are</li></a>
+              <a href="what-we-do.html"><li>What We Do</li></a>
+              <a href="how-we-do-it.html"><li>How We Do it</li></a>
+            </ul>
+          </div>
+
+          <div class="navlinks-mobile">
+            <ul>
+              <li>
+                <a href="who-we-are.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    Who We Are
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="what-we-do.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    What We Do
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="how-we-do-it.html" style="text-decoration: none;">
+                  <div class="link-header text-white">
+                    How We Do it
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
 
-    <section
-      id="second-section"
-      class="relative z-10 h-fit -mt-[100px] lg:-mt-[140px] overflow-hidden"
-    >
-      <div
-        class="absolute top-0 h-full left-1/2 z-10 -translate-x-1/2 w-[450%] md:w-[280%] lg:w-[280%] bg-[#f8f7f2] rounded-[100%] bg-[--color-agri-a] empty-img-light"
-      ></div>
+      <div class="hero-slider-section">
+        <div
+          class="slide active"
+          style="
+            background-image: url('assets/Links/compressed-img/agriculture-img/agriculture-img4.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+          "
+        >
+          <div class="hero-content-wrapper">
+            <div class="hero-mid-section">
+              <img
+                class="single-logo-transparent"
+                src="assets/images/single-logo-transparent.png"
+                alt=""
+              />
+              <div class="hero-mid-section-content">
+                <div class="hero-title">EnerGlobix Agriculture</div>
+                <div class="hero-title">
+                  Driven by purpose - delivered in bulk
+                </div>
+              </div>
+            </div>
 
-      <div
-        id="section-how-inner"
-        class="relative z-20 pt-20 pb-20 lg:pt-28 lg:pb-28 px-6 md:px-12"
-      >
-        <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16">
-          <h2
-            class="common-heading font-bold mb-3 text-[--color-beige-dark] leading-tight"
-          >
+            <div class="hero-lower-section">
+              <div class="">
+                <a class="energlobix__links" href="#about-us">
+                  <div class="energlobix__links">Explore our vision</div>
+                  <img src="assets/Links/arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="about-section" style="background-position: top;">
+        <div
+          class="curve-overlay position-absolute top-0 start-50 translate-middle-x bg-light-green z-1"
+        ></div>
+
+        <div id="about-us" class="oval-container green-map-bg">
+          <div class="energlobix__title text-center text-gold font-bold">
             What We Do
-          </h2>
-          <p class="text-white common-description max-w-full mx-auto">
+          </div>
+
+          <div class="container energlobix__text mt-3 text-center text-white">
             We are engaged in the global bulk supply of agricultural
+
+            <br class="hide-on-mobile" />
+            commodities, connecting production with demand across
+
+            <br class="hide-on-mobile" />
+            markets that never stand still.
+          </div>
+
+          <div class="row my-5">
+            <div
+              id="Purpose-and-Values"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2 video-ratio-image"
+                    src="assets/Links/compressed-img/agri-card-1.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Wheat
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    A Global Consumption Base. One of the most widely traded and
+                    consumed commodities worldwide. Fertilizer is fundamental to
+                    agricultural output and longterm food security.
+                  </div>
+
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    It directly impacts crop yield, soil performance, and the
+                    ability to meet growing global demand. We supply fertilizer
+                    at scale, supporting producers with the inputs required to
+                    sustain productivity across regions and seasons.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="Vision-and-Mission"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2 video-ratio-image"
+                    src="assets/Links/compressed-img/agri-card-2.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Grain
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Foundational to Food and Industry. A core component in both
+                    human consumption and agricultural ecosystems.
+                  </div>
+
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Grain plays a central role in both human consumption and
+                    agricultural ecosystems. <br class="hide-on-mobile" />
+                    It supports livestock production, food processing, and
+                    industrial use, making it a critical component of global
+                    supply chains. Our operations ensure that grain moves
+                    consistently across markets, maintaining continuity in
+                    systems that depend on it
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              id="Purpose-and-Values"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2 video-ratio-image"
+                    src="assets/Links/compressed-img/agri-card-3.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Cooking Oil
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Daily Demand at Scale. A consistently consumed commodity
+                    across households and industries Cooking oil is a daily
+                    necessity across households, food industries, and commercial
+                    operations.
+                  </div>
+
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Its consumption is stable, recurring, and global.
+                  </div>
+
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    We supply cooking oil at scale, ensuring consistent
+                    availability in markets where demand is constant.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="Vision-and-Mission"
+              class="col-lg-6 col-md-6 col-sm-12 mt-3"
+            >
+              <div class="about-us-card">
+                <div class="card-image-container text-center">
+                  <img
+                    class="card-image-2 video-ratio-image"
+                    src="assets/Links/compressed-img/agri-card-4.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-content-2 bg-card-gold">
+                  <div class="divider-logo-container">
+                    <img
+                      class="divider-logo"
+                      src="assets/Links/logo-mini-agri.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="energlobix__card-title text-black mt-3 font-bold">
+                    Fertilizer
+                  </div>
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    Driving Agricultural Output. A critical input for global
+                    food production. Fertilizer is fundamental to agricultural
+                    output and long-term food security. It directly impacts crop
+                    yield, soil performance, and the ability to meet growing
+                    global demand.
+                  </div>
+
+                  <div class="energlobix__card-text text-[--black-color] mt-3">
+                    We supply fertilizer at scale, supporting producers with the
+                    inputs required to sustain productivity across regions and
+                    seasons.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How we do it Section -->
+      <div class="green-section">
+        <div id="commodities" class="commodities-section">
+          <div class="energlobix__title text-center text-gold font-bold">
+            A Business Built on Essentials
+          </div>
+
+          <div class="container energlobix__text mt-3 text-center text-white">
+            We are engaged in the global bulk supply of agricultural
+
             <br class="hide-on-mobile" />
             commodities, connecting production with demand across
             <br class="hide-on-mobile" />
             markets that never stand still.
-          </p>
-        </div>
-
-        <div
-          class="w-full lg:max-w-[95%] xl:max-w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14"
-        >
-          <!-- CARD 1: Wheat -->
-          <div
-            class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-          >
-            <div
-              class="relative w-[95%] aspect-video mt-10 mx-auto rounded -mb-10 z-10"
-            >
-              <img
-                src="./assets/Links/compressed-img/agri-card-1.webp"
-                alt="Wheat"
-                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-              />
-              <img
-                src="./assets/Links/logo-mini-agri.png"
-                class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7"
-              />
-              <div
-                class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-              ></div>
-            </div>
-
-            <div
-              class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-            >
-              <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-                Wheat
-              </h3>
-              <p class="text-[--color-new-black] card-desc mb-3">
-                A Global Consumption Base. One of the most widely traded and
-                consumed commodities worldwide. Fertilizer is fundamental to
-                agricultural output and longterm food security
-              </p>
-              <p class="text-[--color-new-black] card-desc">
-                It directly impacts crop yield, soil performance, and the
-                ability to meet growing global demand. We supply fertilizer at
-                scale, supporting producers with the inputs required to sustain
-                productivity across regions and seasons.
-              </p>
-            </div>
-          </div>
-
-          <!-- CARD 2: Grain -->
-          <div
-            class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-          >
-            <div
-              class="relative w-[95%] aspect-video mt-10 mx-auto rounded -mb-10 z-10"
-            >
-              <img
-                src="./assets/Links/compressed-img/agri-card-2.webp"
-                alt="Grain"
-                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-              />
-              <img
-                src="./assets/Links/logo-mini-agri.png"
-                class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-              />
-              <div
-                class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-              ></div>
-            </div>
-
-            <div
-              class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-            >
-              <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-                Grain
-              </h3>
-              <p class="text-[--color-new-black] card-desc mb-3">
-                Foundational to Food and Industry. A core component in both
-                human consumption and agricultural ecosystems.
-              </p>
-              <p class="text-[--color-new-black] card-desc">
-                Grain plays a central role in both human consumption and
-                agricultural ecosystems.<br />
-                It supports livestock production, food processing, and
-                industrial use, making it a critical component of global supply
-                chains. Our operations ensure that grain moves consistently
-                across markets, maintaining continuity in systems that depend on
-                it.
-              </p>
-            </div>
-          </div>
-
-          <!-- CARD 3: Cooking Oil -->
-          <div
-            class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-          >
-            <div
-              class="relative w-[95%] aspect-video mt-10 mx-auto rounded -mb-10 z-10"
-            >
-              <img
-                src="./assets/Links/compressed-img/agri-card-3.webp"
-                alt="Cooking Oil"
-                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-              />
-              <img
-                src="./assets/Links/logo-mini-agri.png"
-                class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-              />
-              <div
-                class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-              ></div>
-            </div>
-
-            <div
-              class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-            >
-              <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-                Cooking Oil
-              </h3>
-              <p class="text-[--color-new-black] card-desc mb-3">
-                Daily Demand at Scale. A consistently consumed commodity across
-                households and industries Cooking oil is a daily necessity
-                across households, food industries, and commercial operations.
-              </p>
-              <p class="text-[--color-new-black] card-desc mb-3">
-                Its consumption is stable, recurring, and global
-              </p>
-              <p class="text-[--color-new-black] card-desc">
-                We supply cooking oil at scale, ensuring consistent availability
-                in markets where demand is constant.
-              </p>
-            </div>
-          </div>
-
-          <!-- CARD 4: Fertilizer -->
-          <div
-            class="group shadow-xl shadow-[--color-new-black]/5 overflow-hidden flex flex-col"
-          >
-            <div
-              class="relative w-[95%] aspect-video mt-10 mx-auto rounded -mb-10 z-10"
-            >
-              <img
-                src="./assets/Links/compressed-img/agri-card-4.webp"
-                alt="Fertilizer"
-                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 rounded z-10"
-              />
-              <img
-                src="./assets/Links/logo-mini-agri.png"
-                class="w-10 lg:w-11 absolute bottom-0 translate-y-1/2 left-7 z-30"
-              />
-              <div
-                class="absolute inset-0 bg-[--color-new-black]/10 z-20 transition-opacity"
-              ></div>
-            </div>
-
-            <div
-              class="p-8 lg:p-10 pt-16 lg:pt-[72px] pb-6 bg-[--color-beige-card] rounded flex-1"
-            >
-              <h3 class="card-title font-bold mb-3 text-[--color-new-black]">
-                Fertilizer
-              </h3>
-              <p class="text-[--color-new-black] card-desc mb-3">
-                Driving Agricultural Output. A critical input for global food
-                production. Fertilizer is fundamental to agricultural output and
-                long-term food security. It directly impacts crop yield, soil
-                performance, and the ability to meet growing global demand.
-              </p>
-              <p class="text-[--color-new-black] card-desc">
-                We supply fertilizer at scale, supporting producers with the
-                inputs required to sustain productivity across regions and
-                seasons.
-              </p>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section
-      class="w-full bg-[--color-agri-dark] relative -mt-[100px] lg:-mt-[140px] pt-[180px] pb-20 lg:pt-[252px] lg:pb-28 px-6"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="common-heading font-bold mb-3 text-[--color-beige-dark] leading-tight"
-        >
-          A Business Built on Essentials
-        </h2>
-        <p class="text-white common-description mb-3 max-w-full mx-auto">
-          We are engaged in the global bulk supply of agricultural commodities,
-          connecting production with demand across markets that never stand
-          still.
-        </p>
-      </div>
-    </section>
+        <div class="row mt-5">
+          <!-- Row 1 -->
 
-    <section
-      class="w-full bg-[--color-new-black] grid grid-cols-1 lg:grid-cols-2 items-stretch"
-    >
-      <div
-        class="w-full min-h-[500px] bg-[--color-beige-c] flex flex-col justify-center"
-      >
-        <div
-          id="capabilities-container"
-          class="flex relative flex-col items-center gap-10 py-20 lg:py-28 px-6 md:px-12 lg:px-20 w-full mx-auto"
-        >
-          <img src="./assets/Links/logo-mini-agri2.png" class="w-14" />
-          <div class="flex flex-col items-center gap-3">
-            <h4
-              class="text-[--color-agri-a] common-description mx-auto font-bold text-center w-full"
+          <div
+            id="Employees"
+            class="col-lg-6 col-sm-12 insights-box"
+            style="
+              background: linear-gradient(
+                  rgba(184, 166, 133, 0.85),
+                  rgba(184, 166, 133, 0.85)
+                ),
+                url('assets/Links/compressed-img/split-right-cropped.png');
+              background-size: cover;
+              background-position: top;
+              background-repeat: no-repeat;
+            "
+          >
+            <div class="text-center mb-3">
+              <img
+                src="assets/Links/logo-mini-agri2.png"
+                alt=""
+                class="default-logo-size"
+              />
+            </div>
+
+            <div
+              class="energlobix__text text-white text-light-green text-center mt-3"
+              style="font-weight: bold;"
             >
               Quality as a Standard
-            </h4>
-            <h4
-              class="text-[--color-new-black] common-description mx-auto text-center w-full"
-            >
-              In agricultural commodities, quality is not a detail it defines
-              the entire value chain.
-            </h4>
+            </div>
 
-            <h4
-              class="text-[--color-agri-a] common-description mx-auto font-bold text-center w-full"
+            <div class="energlobix__text text-white text-center mt-3">
+              In agricultural commodities, quality is not a detail
+
+              <br class="hide-on-mobile" />
+              it defines the entire value chain.
+            </div>
+
+            <div
+              class="energlobix__text text-white text-light-green text-center mt-3"
+              style="font-weight: bold;"
             >
               We focus on:
-            </h4>
+            </div>
             <ul
-              id="capabilities-list"
-              class="flex flex-col gap-3 items-start lg:items-center w-fit px-8 max-w-full"
+              class="energlobix__text text-white mt-3 list-unstyled"
+              style="
+                text-align: center;
+                padding-left: 20px;
+                list-style: none !important;
+                margin-bottom: 0 !important;
+              "
             >
-              <li
-                class="text-[--color-new-black] leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-[--color-new-black]"
-                ></span>
-                Consistent product quality
-              </li>
-              <li
-                class="text-[--color-new-black] leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-[--color-new-black]"
-                ></span>
-                Reliable sourcing from trusted partners
-              </li>
-              <li
-                class="text-[--color-new-black] leading-none common-description text-center w-full flex items-center justify-center gap-3"
-              >
-                <span
-                  class="block h-2 aspect-square rounded-full bg-[--color-new-black]"
-                ></span>
-                Standards that meet international requirements
+              <li class="mb-3">• Consistent product quality</li>
+              <li class="mb-3">• Reliable sourcing from trusted partners</li>
+              <li>
+                • Standards that meet international requirements
               </li>
             </ul>
-
-            <h4
-              class="text-[--color-new-black] common-description mx-auto text-center w-full"
-            >
+            <div class="energlobix__text text-white text-center mt-3">
               Quality is what sustains trust and trust sustains trade.
-            </h4>
+            </div>
           </div>
+
+          <div
+            class="col-lg-6 col-sm-12 insights-box d-none d-lg-block d-xl-block"
+            style="
+              background-image: url('assets/Links/compressed-img/agri-right-img\ 1.png');
+              background-size: cover;
+            "
+          ></div>
+
+          <div
+            class="col-lg-6 col-sm-12 insights-box d-block d-lg-none"
+            style="
+              background-image: url('assets/Links/compressed-img/agri-right-img\ 1.png');
+              background-size: cover;
+            "
+          ></div>
         </div>
       </div>
-      <div class="w-full h-64 lg:h-auto py-28 split-right-img"></div>
-    </section>
 
-    <section
-      id="section-contact"
-      class="w-full min-h-screen bg-[--color-agri-dark] relative px-6 py-20 lg:py-28"
-    >
-      <h1
-        class="text-3xl lg:text-[32px] font-bold mb-10 lg:mb-14 text-[--color-beige-c] text-center leading-tight"
+      <section
+        id="section-contact"
+        class="bg-dark-green"
+        style="padding-top: 120px; padding-bottom: 100px; min-height: 100vh;"
       >
-        Contact us
-      </h1>
-
-      <div
-        class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-0"
-      >
-        <!-- Left Side: Contact Info -->
-        <div class="flex flex-col gap-3">
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">
-              Office Location
-            </h2>
-            <p class="text-[--color-beige-c] description-link">
-              Office 2704,<br />
-              Jumeirah Business<br />
-              Center 2 (JBC 2),<br />
-              JLT, Dubai, UAE
-            </p>
-          </div>
-          <div>
-            <h2 class="text-white text-[30px] font-medium mb-1">Contact</h2>
-            <p class="text-[--color-beige-c] description-link">
-              info@energlobix.com
-            </p>
-          </div>
-        </div>
-
-        <!-- Right Side: Form -->
-        <form action="#" class="flex flex-col gap-3">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="text"
-              placeholder="Name*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Phone*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="email"
-              placeholder="Email*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-            <input
-              type="text"
-              placeholder="Company*"
-              class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] text-sm rounded-[2px]"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Subject*"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          />
-          <textarea
-            placeholder="Message*"
-            rows="4"
-            class="bg-transparent border border-[#B8A685] p-3 text-white focus:outline-none placeholder:text-[--color-beige-c] w-full text-sm rounded-[2px]"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-[#9e8b6d] text-xs text-white py-3 px-10 w-fit mt-4 uppercase tracking-widest hover:bg-[#B8A685] transition-colors"
+        <div class="container contact-container">
+          <!-- Heading -->
+          <h1
+            class="energlobix__title text-center text-gold"
+            style="font-weight: bold;"
           >
-            Send Message
-          </button>
-        </form>
-      </div>
+            Contact us
+          </h1>
 
-      <div class="w-full flex flex-col gap-10 items-center mt-24">
-        <div class="flex flex-col gap-1">
-          <img src="./assets/Links/logo.png" class="w-32 sm:w-36" />
-        </div>
+          <!-- Main Row -->
+          <div class="contact-layout">
+            <!-- LEFT -->
+            <div class="contact-info">
+              <div class="mb-5">
+                <h2 class="contact-side-title">
+                  Office Location
+                </h2>
 
-        <h4 class="text-xl lg:text-[22px] text-[--color-beige-c]">
-          Explore Our Businesses
-        </h4>
+                <p class="contact-side-text">
+                  Office 2704,<br />
+                  Jumeirah Business Center 2 (JBC 2),<br />
+                  JLT, Dubai, UAE
+                </p>
+              </div>
 
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <h4 class="text-xs md:text-sm font-bold text-[--color-beige-c]">
-            © EnerGlobix 2024
-          </h4>
-          <div class="flex gap-8 lg:gap-16">
-            <h4
-              class="text-xs md:text-sm font-bold text-[--color-beige-c] cursor-pointer hover:underline"
-            >
-              Terms of use
-            </h4>
-            <h4
-              class="text-xs md:text-sm font-bold text-[--color-beige-c] cursor-pointer hover:underline"
-            >
-              Privacy policy
-            </h4>
+              <div>
+                <h2 class="contact-side-title">
+                  Contact
+                </h2>
+
+                <p class="contact-side-text">
+                  info@energlobix.com
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="contact-form-wrapper">
+              <div class="form-grid">
+                <input type="text" placeholder="Name*" class="custom-input" />
+
+                <input type="text" placeholder="Phone*" class="custom-input" />
+
+                <input type="email" placeholder="Email*" class="custom-input" />
+
+                <input
+                  type="text"
+                  placeholder="Company*"
+                  class="custom-input"
+                />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Subject*"
+                class="custom-input subject-input"
+              />
+
+              <textarea
+                placeholder="Message*"
+                class="custom-input custom-textarea"
+              ></textarea>
+
+              <button type="submit" class="contact-btn">
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="contact-footer">
+            <img src="./assets/Links/logo.png" class="footer-logo" alt="" />
+
+            <h3 class="footer-subtitle">
+              Explore Our Businesses
+            </h3>
+
+            <div class="footer-links-wrapper">
+              <h4 class="footer-link-text">
+                © EnerGlobix 2024
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Terms of use
+              </h4>
+
+              <h4 class="footer-link-text footer-link-hover">
+                Privacy policy
+              </h4>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript -->
+    <script src="assets/js/script.js"></script>
 
     <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden-menu");
+      // Wait until the entire page is loaded
+      window.addEventListener("load", function () {
+        // Hide the loader
+        document.getElementById("loader").style.display = "none";
+        // Show the main content
+        document.getElementById("main-content").style.display = "block";
+        // Show message in console
+        console.log("Content is loaded");
+      });
+
+      // Accordion Functionality
+      function toggleAccordion(item) {
+        const content = item.querySelector(".approach-accordion-body");
+        const isOpen = item.getAttribute("data-open") === "true";
+
+        // Close other items
+        document
+          .querySelectorAll(".approach-accordion-item")
+          .forEach((other) => {
+            if (other !== item) {
+              other.setAttribute("data-open", "false");
+              const otherBody = other.querySelector(".approach-accordion-body");
+              if (otherBody) {
+                otherBody.style.maxHeight = "0";
+                otherBody.style.opacity = "0";
+              }
+              const otherIcon = other.querySelector(".approach-accordion-icon");
+              if (otherIcon) {
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            }
+          });
+
+        const icon = item.querySelector(".approach-accordion-icon");
+        if (isOpen) {
+          item.setAttribute("data-open", "false");
+          if (content) {
+            content.style.maxHeight = "0";
+            content.style.opacity = "0";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(0deg)";
+          }
+        } else {
+          item.setAttribute("data-open", "true");
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          }
+          if (icon) {
+            icon.style.transform = "rotate(90deg)";
+          }
+        }
       }
 
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.querySelector(".navlinks-mobile");
+        menu.classList.toggle("active");
+      }
+
+      // Dynamic padding logic for accordion div
       document.addEventListener("DOMContentLoaded", () => {
-        const sliderTrack = document.getElementById("sliderTrack");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
+        const approachAccordion = document.getElementById("approach-accordion");
+        const sectionApproachInner = document.getElementById(
+          "section-approach-inner"
+        );
+        const sectionSignature = document.getElementById("section-signature");
 
-        if (sliderTrack && prevBtn && nextBtn) {
-          let currentIndex = 0;
-          const totalSlides = sliderTrack.children.length;
+        if (approachAccordion && sectionApproachInner && sectionSignature) {
+          const adjustOverlapPadding = () => {
+            const isMobile = window.innerWidth < 1024;
+            const gap = 112; // 28 in tailwind unit
+            const topOffset = isMobile ? 100 : 140; // matches -mt-[100px] and -mt-[140px]
 
-          function getSlidesVisible() {
-            return window.innerWidth >= 768 ? 2 : 1;
-          }
+            // We don't add halfHeight because the accordion is not absolute
+            sectionApproachInner.style.paddingBottom = `${gap}px`;
+            sectionSignature.style.paddingTop = `${topOffset + gap}px`;
+          };
 
-          function updateSlider() {
-            const maxIndex = totalSlides - getSlidesVisible();
-
-            // Adjust currentIndex if it's out of bounds after resize
-            if (currentIndex > maxIndex) {
-              currentIndex = Math.max(0, maxIndex);
-            }
-
-            const slide = sliderTrack.children[0];
-            const slideWidth = slide.offsetWidth;
-            const gap = 16; // gap-4 is 16px
-
-            const moveAmount = currentIndex * (slideWidth + gap);
-            sliderTrack.style.transform = `translateX(-${moveAmount}px)`;
-          }
-
-          prevBtn.addEventListener("click", () => {
-            if (currentIndex > 0) {
-              currentIndex--;
-              updateSlider();
-            }
+          const resizeObserver = new ResizeObserver(() => {
+            adjustOverlapPadding();
           });
 
-          nextBtn.addEventListener("click", () => {
-            const maxIndex = totalSlides - getSlidesVisible();
-            if (currentIndex < maxIndex) {
-              currentIndex++;
-              updateSlider();
-            }
-          });
+          resizeObserver.observe(approachAccordion);
+          window.addEventListener("resize", adjustOverlapPadding);
 
-          window.addEventListener("resize", updateSlider);
+          // Initial calculation
+          setTimeout(adjustOverlapPadding, 100);
         }
-
-        // Dynamic padding for overlapping sections to ensure equal visible top/bottom padding
-        function adjustDynamicPadding() {
-          const sections = document.querySelectorAll(".dynamic-pt-section");
-          sections.forEach((sec) => {
-            // Target visible padding: roughly 64px on lg (pb-16), 40px on mobile (pb-10)
-            const targetVisiblePadding = window.innerWidth >= 1024 ? 64 : 40;
-            const style = window.getComputedStyle(sec);
-            const mt = parseFloat(style.marginTop);
-            if (mt < 0) {
-              // The curve overlaps exactly by the negative margin amount.
-              // To make visible padding = target, total padding-top must be overlap + target
-              sec.style.paddingTop = `${Math.abs(mt) + targetVisiblePadding}px`;
-            }
-          });
-        }
-
-        adjustDynamicPadding();
-        window.addEventListener("resize", adjustDynamicPadding);
       });
     </script>
-
-    <!-- 
-GitHub Pages Asset Path Fixes:
-Original: /assets/Links/compressed-img/how-hero.webp -> Fixed: ./assets/Links/compressed-img/how-hero.webp\nOriginal: /assets/Links/compressed-img/circle-img-1.webp -> Fixed: ./assets/Links/compressed-img/circle-img-1.webp\nOriginal: index.html -> Fixed: ./index.html\nOriginal: who-we-are.html -> Fixed: ./who-we-are.html\nOriginal: how-we-do-it.html -> Fixed: ./how-we-do-it.html\nOriginal: invest.html -> Fixed: ./invest.html\nOriginal: contact.html -> Fixed: ./contact.html\nOriginal: assets/Links/arrow.svg -> Fixed: ./assets/Links/arrow.svg\nOriginal: /assets/Links/compressed-img/north-43-2.webp -> Fixed: ./assets/Links/compressed-img/north-43-2.webp\nOriginal: /assets/Links/compressed-img/exceptional1.webp -> Fixed: ./assets/Links/compressed-img/exceptional1.webp\nOriginal: /assets/Links/compressed-img/north-43-10.webp -> Fixed: ./assets/Links/compressed-img/north-43-10.webp\nOriginal: /assets/Links/compressed-img/north-43-9.webp -> Fixed: ./assets/Links/compressed-img/north-43-9.webp
--->
-    <script src="./navbar-scroll.js"></script>
   </body>
 </html>
