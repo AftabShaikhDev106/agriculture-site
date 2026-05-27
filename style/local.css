@@ -908,20 +908,20 @@ body {
 .what-we-do-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/bg-images/circle-what.svg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  background-image: url("../assets/Links/compressed-img/bg-images/map-what.svg"), url("../assets/Links/compressed-img/bg-images/circle-what.svg");
+  background-size: cover, cover;
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
   z-index: 2;
 }
 
 .how-we-do-it-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/bg-images/circle-how.svg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  background-image: url("../assets/Links/compressed-img/bg-images/map-how.svg"), url("../assets/Links/compressed-img/bg-images/circle-how.svg");
+  background-size: cover, cover;
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
   z-index: 2;
 }
 
@@ -1145,11 +1145,11 @@ body {
   }
 
   .what-we-do-about-section {
-    background-image: url("../assets/Links/compressed-img/bg-images/circle-what-who.svg");
+    background-image: url("../assets/Links/compressed-img/bg-images/map-what-who.svg"), url("../assets/Links/compressed-img/bg-images/circle-what-who.svg");
   }
 
   .how-we-do-it-about-section {
-    background-image: url("../assets/Links/compressed-img/bg-images/circle-how-mob.svg");
+    background-image: url("../assets/Links/compressed-img/bg-images/map-how-mob.svg"), url("../assets/Links/compressed-img/bg-images/circle-how-mob.svg");
   }
 
   .insights-about-section {
@@ -1223,7 +1223,10 @@ body {
 }
 
 @media (max-width: 576px) {
-  .about-section {
+  .about-section,
+  .who-we-are-about-section,
+  .what-we-do-about-section,
+  .how-we-do-it-about-section {
     margin-top: -535px;
     /* border-top-left-radius: 100% 140px; */
     /* border-top-right-radius: 100% 140px;      */
@@ -2111,9 +2114,10 @@ body {
   background-position: center bottom !important;
 }
 
-@media (max-width: 576px) {
-  .ship-agri-slide {
-    background-size: 300% !important;
-    background-position: 30% 65% !important;
+@media (max-width: 768px) {
+  .empty-green-map-section {
+    min-height: fit-content;
+    padding-bottom: 80px;
+    padding-top: 360px;
   }
 }
