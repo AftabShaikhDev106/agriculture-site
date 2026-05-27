@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Adelle-Sans-Bold";
-  src: url("../fonts/Adelle-Sans-Bold.otf");
+  src: url("../assets/fonts/Adelle-Sans-Bold.otf");
   /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Adelle-Sans-Light";
-  src: url("../fonts/Adelle-Sans-Light.otf");
+  src: url("../assets/fonts/Adelle-Sans-Light.otf");
   /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
@@ -24,10 +24,26 @@
 
 @font-face {
   font-family: "Adelle-Sans-Regular";
-  src: url("../fonts/fonnts.com-Adelle_Sans_ARA_Regular.otf");
+  src: url("../assets/fonts/fonnts.com-Adelle_Sans_ARA_Regular.otf");
   /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
+}
+
+.font-minion-pro {
+  font-family: "MinionPro-Regular", serif !important;
+}
+
+.font-adelle-sans-bold {
+  font-family: "Adelle-Sans-Bold", sans-serif !important;
+}
+
+.font-adelle-sans-light {
+  font-family: "Adelle-Sans-Light", sans-serif !important;
+}
+
+.font-adelle-sans-regular {
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
 }
 
 :root {
@@ -47,7 +63,6 @@
 }
 
 .bg-light-green {
-  background-color: var(--light-green-color);
   background-color: var(--light-green-color);
 }
 
@@ -620,6 +635,7 @@ body {
   width: 100%;
   min-height: 1134px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .slide {
@@ -790,7 +806,7 @@ body {
 
 .explore-link-container img {
   width: 35px;
-  margin-top: -5px;
+  /* margin-top: -5px; */
 }
 
 .default-logo-size {
@@ -846,10 +862,11 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  /* background-image: url("../../assets/Links/compressed-img/circle-img-1.webp");
+  background-image: url("../assets/Links/compressed-img/bg-images/circle-index.svg");
   background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat; */
+  background-position: top center;
+  z-index: 2;
+  background-repeat: no-repeat;
 }
 
 .index-bg {
@@ -873,11 +890,11 @@ body {
 .who-we-are-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/agriculture-img/agriculture-img7.webp");
+  background-image: url("../assets/Links/compressed-img/bg-images/circle-who.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  z-index: 2;
 }
 
 .bg-who-we-are {
@@ -891,19 +908,21 @@ body {
 .what-we-do-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("/Energlobix/assets/images/what-we-do-about-section-bg.png");
+  background-image: url("../assets/Links/compressed-img/bg-images/circle-what.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 
 .how-we-do-it-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("/Energlobix/assets/images/how-we-do-it-about-section-bg.png");
+  background-image: url("../assets/Links/compressed-img/bg-images/circle-how.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 
 .insights-about-section {
@@ -1118,19 +1137,19 @@ body {
 
 @media (max-width: 576px) {
   .about-section {
-    background-image: url("/Energlobix/assets/images/about_us_mobile.png");
+    background-image: url("../assets/Links/compressed-img/bg-images/circle-index-mob.svg");
   }
 
   .who-we-are-about-section {
-    background-image: url("/Energlobix/assets/images/who-we-are-about-us-bg-mobile.png");
+    background-image: url("../assets/Links/compressed-img/bg-images/circle-who-mob.svg");
   }
 
   .what-we-do-about-section {
-    background-image: url("/Energlobix/assets/images/what-we-do-about-section-bg-mobile.png");
+    background-image: url("../assets/Links/compressed-img/bg-images/circle-what-who.svg");
   }
 
   .how-we-do-it-about-section {
-    background-image: url("/Energlobix/assets/images/how-we-do-it-about-section-bg-mobile.png");
+    background-image: url("../assets/Links/compressed-img/bg-images/circle-how-mob.svg");
   }
 
   .insights-about-section {
@@ -1145,7 +1164,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 120.597px;
+  padding-top: 151.597px;
   padding-bottom: 151.597px;
   position: relative;
   z-index: 10;
