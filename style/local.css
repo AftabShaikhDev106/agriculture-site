@@ -890,7 +890,7 @@ body {
 .who-we-are-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/bg-images/circle-who.svg");
+  background-image: url("../assets/Links/compressed-img/bg-images/circle-who-new.svg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -951,7 +951,7 @@ body {
   color: white;
   font-size: 28px;
   margin-bottom: 12px;
-  font-family: "MinionPro-Regular", sans-serif;
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
 }
 
 .contact-side-text {
@@ -1141,7 +1141,7 @@ body {
   }
 
   .who-we-are-about-section {
-    background-image: url("../assets/Links/compressed-img/bg-images/circle-who-mob.svg");
+    background-image: url("../assets/Links/compressed-img/bg-images/circle-who-new-mob.svg");
   }
 
   .what-we-do-about-section {
@@ -1375,6 +1375,16 @@ body {
 
   display: flex;
   flex-direction: column;
+}
+
+.inner-pad{
+  padding: 0px 20px;
+}
+
+@media (max-width:576px){
+  .inner-pad{
+    padding: 0px 15px;
+  }
 }
 
 .divider-container {
