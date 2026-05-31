@@ -1196,7 +1196,6 @@ body {
   width: 10%;
   max-width: 150px;
   aspect-ratio: 1;
-  background: red;
   border-radius: 50%;
   position: relative;
   z-index: 10;
@@ -1469,6 +1468,9 @@ body {
 
 @media (max-width: 576px) {
   .commodities-section {
+    margin-top: 80px;
+  margin-bottom: 80px;
+
     padding-left: 16px;
     padding-right: 16px;
   }
