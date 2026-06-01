@@ -2161,7 +2161,7 @@ body {
   padding: 0;
   cursor: pointer;
   pointer-events: auto;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   transition: color 0.15s ease-in-out;
 }
 
