@@ -52,46 +52,82 @@
           <a href="index.html">
             <img src="assets/Links/logo.png" alt="" class="logo" />
           </a>
-          <button
-            class="nav-toggle"
-            onclick="toggleMobileMenu()"
-            aria-label="Toggle navigation"
-          >
-            &#9776;
-          </button>
+          <div class="navbar-right-side">
+            <div class="navlinks">
+              <ul>
+                <a href="who-we-are.html"><li class="active">Who We Are</li></a>
+                <a href="what-we-do.html"><li>What We Do</li></a>
+                <a href="how-we-do-it.html"><li>How We Do it</li></a>
+              </ul>
+            </div>
 
-          <div class="navlinks">
-            <ul>
-              <a href="who-we-are.html"><li class="active">Who We Are</li></a>
-              <a href="what-we-do.html"><li>What We Do</li></a>
-              <a href="how-we-do-it.html"><li>How We Do it</li></a>
-            </ul>
-          </div>
+            <!-- Hamburger Icon & Menu Dropdown Wrapper -->
+            <div class="menu-wrapper">
+              <button
+                class="hamburger-btn"
+                id="open-menu-btn"
+                aria-label="Toggle navigation"
+              >
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
 
-          <div class="navlinks-mobile">
-            <ul>
-              <li>
-                <a href="who-we-are.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Who We Are
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="what-we-do.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    What We Do
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="how-we-do-it.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    How We Do it
-                  </div>
-                </a>
-              </li>
-            </ul>
+              <!-- Dropdown Menu / Sidebar -->
+              <div class="nav-menu-container" id="nav-menu">
+                <!-- Sidebar Close Button (only visible on mobile/tablet) -->
+                <button class="close-menu-btn" id="close-menu-btn" aria-label="Close navigation">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+
+                <ul class="nav-menu-list">
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobixholding.kasehub.com/"
+                      class="nav-menu-link"
+                      >Holding</a
+                    >
+                  </li>
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Energy
+                      <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li><a href="https://energlobix.com/" class="submenu-link">Home</a></li>
+                      <li><a href="https://energlobix.com/whoweare/" class="submenu-link">Who We Are</a></li>
+                      <li><a href="https://energlobix.com/whatwedo/" class="submenu-link">What We Do</a></li>
+                      <li><a href="https://energlobix.com/howwedoit/" class="submenu-link">How We Do It</a></li>
+                      <li><a href="https://energlobix.com/insights/" class="submenu-link">Insights</a></li>
+                      <li><a href="https://energlobix.com/contact" class="submenu-link">Contact</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Agriculture
+                      <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li><a href="https://energlobixagriculture.kasehub.com/" class="submenu-link">Home</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/who-we-are.html" class="submenu-link">Who We Are</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/what-we-do.html" class="submenu-link">What We Do</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/how-we-do-it.html" class="submenu-link">How We Do It</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -639,11 +675,84 @@
         }
       }
 
-      // Mobile Menu Toggle
-      function toggleMobileMenu() {
-        const menu = document.querySelector(".navlinks-mobile");
-        menu.classList.toggle("active");
+      // Robust Menu Toggle and Accordion Logic
+      function initNavigationMenu() {
+        const openBtn = document.getElementById("open-menu-btn");
+        const navMenu = document.getElementById("nav-menu");
+        const closeBtn = document.getElementById("close-menu-btn");
+
+        if (!openBtn || !navMenu) return;
+
+        // Prevent duplicate listener binding
+        if (openBtn.dataset.bound) return;
+        openBtn.dataset.bound = "true";
+
+        openBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          navMenu.classList.toggle("active");
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            navMenu.classList.remove("active");
+          });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (navMenu.classList.contains("active") && !navMenu.contains(e.target) && !openBtn.contains(e.target)) {
+            navMenu.classList.remove("active");
+          }
+        });
       }
+
+      function initSubmenuAccordion() {
+        const submenuToggles = document.querySelectorAll(".toggle-submenu");
+        submenuToggles.forEach(toggle => {
+          if (toggle.dataset.bound) return;
+          toggle.dataset.bound = "true";
+
+          toggle.addEventListener("click", (e) => {
+            // Only execute on mobile/tablet (below 992px)
+            if (window.innerWidth < 992) {
+              e.preventDefault();
+              e.stopPropagation();
+              const parentLi = toggle.closest(".has-submenu");
+              const submenu = parentLi.querySelector(".nav-submenu");
+              
+              // Close other submenus first (accordion behavior)
+              document.querySelectorAll(".nav-submenu").forEach(sub => {
+                if (sub !== submenu) sub.classList.remove("open");
+              });
+              document.querySelectorAll(".has-submenu").forEach(li => {
+                if (li !== parentLi) li.classList.remove("active");
+              });
+              
+              submenu.classList.toggle("open");
+              parentLi.classList.toggle("active");
+            }
+          });
+        });
+      }
+
+      // Initialize instantly
+      initNavigationMenu();
+      initSubmenuAccordion();
+
+      // Initialize on DOMContentLoaded
+      document.addEventListener("DOMContentLoaded", () => {
+        initNavigationMenu();
+        initSubmenuAccordion();
+      });
+
+      // Initialize on Window Load
+      window.addEventListener("load", () => {
+        initNavigationMenu();
+        initSubmenuAccordion();
+      });
 
       // Dynamic padding logic for accordion div
       document.addEventListener("DOMContentLoaded", () => {
