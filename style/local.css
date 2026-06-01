@@ -1220,9 +1220,12 @@ body {
 }
 
 @media (max-width: 576px) {
+  .circle-grid-container {
+    gap: 24px !important;
+  }
   .circle-placeholder {
-    width: 40%;
-    margin-bottom: 20px;
+    width: 43%;
+    margin: 0 !important;
   }
 }
 
@@ -1241,22 +1244,22 @@ body {
   .oval-container {
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .oval-container-2 {
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .oval-container-3 {
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
@@ -1476,8 +1479,8 @@ body {
     margin-top: 80px;
   margin-bottom: 80px;
 
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
@@ -1531,7 +1534,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 73px;
+    gap: 20px;
     padding: 30px;
   }
 
@@ -2396,4 +2399,23 @@ body {
   display: flex;
   align-items: center;
   gap: 50px;
+}
+
+.commodity-text-tags {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@media (max-width: 768px) {
+  .commodity-text-tags {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+/* Utility classes to completely remove left & right padding */
+.no-padding-x,
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
