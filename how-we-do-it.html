@@ -704,6 +704,22 @@
           setTimeout(adjustOverlapPadding, 100);
         }
       });
+
+      // Dynamic padding-top on hero-content-wrapper based on navbar height
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.querySelector(".energlobix__navbar");
+        const heroWrapper = document.querySelector(".hero-content-wrapper");
+        if (navbar && heroWrapper) {
+          function syncNavbarPadding() {
+            const navHeight = navbar.getBoundingClientRect().height;
+            heroWrapper.style.paddingTop = navHeight + "px";
+          }
+          syncNavbarPadding();
+          window.addEventListener("resize", syncNavbarPadding);
+          const navResizeObserver = new ResizeObserver(syncNavbarPadding);
+          navResizeObserver.observe(navbar);
+        }
+      });
     </script>
   </body>
 </html>

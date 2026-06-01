@@ -398,12 +398,12 @@ body {
 
 /* Base styles for the navbar */
 .energlobix__navbar {
-  height: 202.937px;
+  /* height: auto — measured dynamically by JS */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  padding-bottom: 0 !important;
   width: 100%;
   max-width: 1320px;
   position: absolute;
@@ -709,16 +709,15 @@ body {
 }
 
 .hero-content-wrapper {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
+  position: relative;
+  z-index: 2;
   width: 100%;
-  height: calc(100% - 280px);
+  height: calc(100% - 335px); /* = abs(.about-section margin-top) on desktop */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
+  /* padding-top set dynamically by JS based on navbar height */
 }
 
 .green-map-bg {
@@ -735,11 +734,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 992px) {
-  .hero-content-wrapper {
-    height: calc(100% - 335px);
-  }
-}
+/* hero-content-wrapper 992px override removed — desktop uses 335px, mobile uses 535px */
 
 .hero-mid-section {
   position: relative;
