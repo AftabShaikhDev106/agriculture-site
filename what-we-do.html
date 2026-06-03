@@ -88,13 +88,24 @@
                 </button>
 
                 <ul class="nav-menu-list">
-                  <li class="nav-menu-item">
-                    <a
-                      href="https://energlobixholding.kasehub.com/"
-                      class="nav-menu-link"
-                      >Holding</a
-                    >
+
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Agriculture
+                      <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li><a href="https://energlobixagriculture.kasehub.com/" class="submenu-link">Home</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/who-we-are.html" class="submenu-link">Who We Are</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/what-we-do.html" class="submenu-link">What We Do</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/how-we-do-it.html" class="submenu-link">How We Do It</a></li>
+                    </ul>
                   </li>
+
+                  
+                  
                   <li class="nav-menu-item has-submenu">
                     <a href="#" class="nav-menu-link toggle-submenu">
                       Energy
@@ -111,20 +122,23 @@
                       <li><a href="https://energlobix.com/contact" class="submenu-link">Contact</a></li>
                     </ul>
                   </li>
-                  <li class="nav-menu-item has-submenu">
-                    <a href="#" class="nav-menu-link toggle-submenu">
-                      Agriculture
-                      <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
-                    </a>
-                    <ul class="nav-submenu">
-                      <li><a href="https://energlobixagriculture.kasehub.com/" class="submenu-link">Home</a></li>
-                      <li><a href="https://energlobixagriculture.kasehub.com/who-we-are.html" class="submenu-link">Who We Are</a></li>
-                      <li><a href="https://energlobixagriculture.kasehub.com/what-we-do.html" class="submenu-link">What We Do</a></li>
-                      <li><a href="https://energlobixagriculture.kasehub.com/how-we-do-it.html" class="submenu-link">How We Do It</a></li>
-                    </ul>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobixholding.kasehub.com/"
+                      class="nav-menu-link"
+                      >Holding</a
+                    >
                   </li>
+
+                   <li class="nav-menu-item">
+                  <a
+                    href="https://energlobix.kasehub.com/"
+                    class="nav-menu-link"
+                    >Main Site</a
+                  >
+                </li>
+                  
                 </ul>
               </div>
             </div>
@@ -187,15 +201,15 @@
 
       <!-- About Section -->
       <div class="what-we-do-about-section" style="background-position: top;">
-        <div id="about-us" class="oval-container">
+        <div id="about-us" class="oval-container px-0">
           <div
-            class="energlobix__title font-adelle-sans-bold text-center text-gold"
+            class="energlobix__title font-adelle-sans-bold text-center padding-x text-gold"
           >
             What We Do
           </div>
 
           <div
-            class="container energlobix__text font-adelle-sans-regular mt-3 text-center px-0 text-white"
+            class="container energlobix__text font-adelle-sans-regular mt-3 text-center padding-x text-white"
           >
             We are engaged in the global bulk supply of agricultural
 
@@ -304,7 +318,7 @@
             </div>
           </div>
 
-          <div class="row mt-3">
+          <div class="row mt-lg-3">
             <div
               id="Purpose-and-Values"
               class="col-lg-6 col-md-6 col-sm-12 mt-3"
@@ -364,6 +378,7 @@
               <div class="about-us-card">
                 <div class="card-image-container text-center">
                   <img
+                  style="object-position: bottom center;"
                     class="card-image-2 video-ratio-image"
                     src="assets/Links/compressed-img/agri-card-4.webp"
                     alt=""
@@ -511,6 +526,8 @@
             style="
               background-image: url('assets/Links/compressed-img/agri-right-img\ 1.png');
               background-size: cover;
+              background-position: bottom right ;
+              background-repeat: no-repeat;
             "
           ></div>
         </div>
@@ -594,9 +611,7 @@
           <div class="contact-footer">
             <img src="./assets/Links/logo.png" class="footer-logo" alt="" />
 
-            <h3 class="footer-subtitle">
-              Explore Our Businesses
-            </h3>
+            
 
             <div class="footer-links-wrapper">
               <h4 class="footer-link-text">
@@ -725,24 +740,21 @@
           toggle.dataset.bound = "true";
 
           toggle.addEventListener("click", (e) => {
-            // Only execute on mobile/tablet (below 992px)
-            if (window.innerWidth < 992) {
-              e.preventDefault();
-              e.stopPropagation();
-              const parentLi = toggle.closest(".has-submenu");
-              const submenu = parentLi.querySelector(".nav-submenu");
-              
-              // Close other submenus first (accordion behavior)
-              document.querySelectorAll(".nav-submenu").forEach(sub => {
-                if (sub !== submenu) sub.classList.remove("open");
-              });
-              document.querySelectorAll(".has-submenu").forEach(li => {
-                if (li !== parentLi) li.classList.remove("active");
-              });
-              
-              submenu.classList.toggle("open");
-              parentLi.classList.toggle("active");
-            }
+            e.preventDefault();
+            e.stopPropagation();
+            const parentLi = toggle.closest(".has-submenu");
+            const submenu = parentLi.querySelector(".nav-submenu");
+            
+            // Close other submenus first (accordion behavior)
+            document.querySelectorAll(".nav-submenu").forEach(sub => {
+              if (sub !== submenu) sub.classList.remove("open");
+            });
+            document.querySelectorAll(".has-submenu").forEach(li => {
+              if (li !== parentLi) li.classList.remove("active");
+            });
+            
+            submenu.classList.toggle("open");
+            parentLi.classList.toggle("active");
           });
         });
       }

@@ -49,7 +49,7 @@
     </div>
 
     <div id="main-content" style="display: none;">
-      <div class="navbar-container">
+     <div class="navbar-container">
         <div class="energlobix__navbar">
           <a href="index.html">
             <img src="assets/Links/logo.png" alt="" class="logo" />
@@ -90,13 +90,24 @@
                 </button>
 
                 <ul class="nav-menu-list">
-                  <li class="nav-menu-item">
-                    <a
-                      href="https://energlobixholding.kasehub.com/"
-                      class="nav-menu-link"
-                      >Holding</a
-                    >
+
+                  <li class="nav-menu-item has-submenu">
+                    <a href="#" class="nav-menu-link toggle-submenu">
+                      Agriculture
+                      <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </a>
+                    <ul class="nav-submenu">
+                      <li><a href="https://energlobixagriculture.kasehub.com/" class="submenu-link">Home</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/who-we-are.html" class="submenu-link">Who We Are</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/what-we-do.html" class="submenu-link">What We Do</a></li>
+                      <li><a href="https://energlobixagriculture.kasehub.com/how-we-do-it.html" class="submenu-link">How We Do It</a></li>
+                    </ul>
                   </li>
+
+                  
+                  
                   <li class="nav-menu-item has-submenu">
                     <a href="#" class="nav-menu-link toggle-submenu">
                       Energy
@@ -113,20 +124,23 @@
                       <li><a href="https://energlobix.com/contact" class="submenu-link">Contact</a></li>
                     </ul>
                   </li>
-                  <li class="nav-menu-item has-submenu">
-                    <a href="#" class="nav-menu-link toggle-submenu">
-                      Agriculture
-                      <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
-                    </a>
-                    <ul class="nav-submenu">
-                      <li><a href="https://energlobixagriculture.kasehub.com/" class="submenu-link">Home</a></li>
-                      <li><a href="https://energlobixagriculture.kasehub.com/who-we-are.html" class="submenu-link">Who We Are</a></li>
-                      <li><a href="https://energlobixagriculture.kasehub.com/what-we-do.html" class="submenu-link">What We Do</a></li>
-                      <li><a href="https://energlobixagriculture.kasehub.com/how-we-do-it.html" class="submenu-link">How We Do It</a></li>
-                    </ul>
+
+                  <li class="nav-menu-item">
+                    <a
+                      href="https://energlobixholding.kasehub.com/"
+                      class="nav-menu-link"
+                      >Holding</a
+                    >
                   </li>
+
+                   <li class="nav-menu-item">
+                  <a
+                    href="https://energlobix.kasehub.com/"
+                    class="nav-menu-link"
+                    >Main Site</a
+                  >
+                </li>
+                  
                 </ul>
               </div>
             </div>
@@ -587,9 +601,7 @@
           <div class="contact-footer">
             <img src="./assets/Links/logo.png" class="footer-logo" alt="" />
 
-            <h3 class="footer-subtitle">
-              Explore Our Businesses
-            </h3>
+           
 
             <div class="footer-links-wrapper">
               <h4 class="footer-link-text">
@@ -718,24 +730,21 @@
           toggle.dataset.bound = "true";
 
           toggle.addEventListener("click", (e) => {
-            // Only execute on mobile/tablet (below 992px)
-            if (window.innerWidth < 992) {
-              e.preventDefault();
-              e.stopPropagation();
-              const parentLi = toggle.closest(".has-submenu");
-              const submenu = parentLi.querySelector(".nav-submenu");
-              
-              // Close other submenus first (accordion behavior)
-              document.querySelectorAll(".nav-submenu").forEach(sub => {
-                if (sub !== submenu) sub.classList.remove("open");
-              });
-              document.querySelectorAll(".has-submenu").forEach(li => {
-                if (li !== parentLi) li.classList.remove("active");
-              });
-              
-              submenu.classList.toggle("open");
-              parentLi.classList.toggle("active");
-            }
+            e.preventDefault();
+            e.stopPropagation();
+            const parentLi = toggle.closest(".has-submenu");
+            const submenu = parentLi.querySelector(".nav-submenu");
+            
+            // Close other submenus first (accordion behavior)
+            document.querySelectorAll(".nav-submenu").forEach(sub => {
+              if (sub !== submenu) sub.classList.remove("open");
+            });
+            document.querySelectorAll(".has-submenu").forEach(li => {
+              if (li !== parentLi) li.classList.remove("active");
+            });
+            
+            submenu.classList.toggle("open");
+            parentLi.classList.toggle("active");
           });
         });
       }
