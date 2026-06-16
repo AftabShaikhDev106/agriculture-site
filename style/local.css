@@ -863,11 +863,19 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cg%20clip-path%3D%22url%28%23clip0_1320_17%29%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22%23B8A685%22/%3E%20%3C/g%3E%20%3Cdefs%3E%20%3CclipPath%20id%3D%22clip0_1320_17%22%3E%20%3Crect%20width%3D%221920%22%20height%3D%221874%22%20fill%3D%22white%22/%3E%20%3C/clipPath%3E%20%3C/defs%3E%20%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%20%3Cg%20clip-path%3D%22url%28%23clip0_1320_17%29%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22%23B8A685%22/%3E%20%3C/g%3E%20%3Cdefs%3E%20%3CclipPath%20id%3D%22clip0_1320_17%22%3E%20%3Crect%20width%3D%223840%22%20height%3D%221874%22%20fill%3D%22white%22/%3E%20%3C/clipPath%3E%20%3C/defs%3E%20%3C/svg%3E");
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   z-index: 2;
   background-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .index-bg {
@@ -909,21 +917,37 @@ body {
 .what-we-do-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/bg-images/map-what.svg"), url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%20%3Cg%20clip-path%3D%22url%28%23clip0_1331_14%29%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22%232F461E%22/%3E%20%3C/g%3E%20%3Cdefs%3E%20%3CclipPath%20id%3D%22clip0_1331_14%22%3E%20%3Crect%20width%3D%221920%22%20height%3D%221874%22%20fill%3D%22white%22/%3E%20%3C/clipPath%3E%20%3C/defs%3E%20%3C/svg%3E");
+  background-image: url("../assets/Links/compressed-img/bg-images/map-what.svg"), url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%20%3Cg%20clip-path%3D%22url%28%23clip0_1331_14%29%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22%232F461E%22/%3E%20%3C/g%3E%20%3Cdefs%3E%20%3CclipPath%20id%3D%22clip0_1331_14%22%3E%20%3Crect%20width%3D%223840%22%20height%3D%221874%22%20fill%3D%22white%22/%3E%20%3C/clipPath%3E%20%3C/defs%3E%20%3C/svg%3E");
   background-size: cover, cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   z-index: 2;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .how-we-do-it-about-section {
   position: relative;
   margin-top: -335px;
-  background-image: url("../assets/Links/compressed-img/bg-images/map-how.svg"), url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221920%22%20height%3D%221874%22%20viewBox%3D%220%200%201920%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%22960%22%20cy%3D%22937%22%20rx%3D%221744%22%20ry%3D%22937%22%20fill%3D%22%23DBC49D%22/%3E%20%3C/svg%3E");
+  background-image: url("../assets/Links/compressed-img/bg-images/map-how.svg"), url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22%23DBC49D%22/%3E%20%3C/svg%3E");
   background-size: cover, cover;
   background-position: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   z-index: 2;
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%223840%22%20height%3D%221874%22%20viewBox%3D%220%200%203840%201874%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%20%3Cellipse%20cx%3D%221920%22%20cy%3D%22937%22%20rx%3D%223488%22%20ry%3D%22937%22%20fill%3D%22black%22/%3E%20%3C/svg%3E");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .insights-about-section {
@@ -2062,7 +2086,7 @@ body {
 }
 
 .approach-accordion-text {
-  color: #fff; /* text-gray-400 */
+  color: #fff;
   margin-top: 16px;
   margin-bottom: 0;
   margin-left: 40px;
@@ -2126,23 +2150,37 @@ body {
 .empty-green-map-section {
   z-index: -1;
   margin-top: -280px;
-  padding-top: 300px;
+  padding-top: 420px; /* Generous top padding to prevent curve overlap and match green-section content spacing */
+  padding-bottom: 120px;
   background-color: var(--dark-green-color);
-  background-image: url("../assets/Links/compressed-img/worldmap-empty-light.png");
-  background-size: min(1300px, 115%);
-  background-position: center calc(50% + 140px);
-  background-repeat: no-repeat;
-  min-height: calc(100vh + 280px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .empty-green-map-section .approach-accordion-card {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: none;
   margin-top: 0;
+}
+
+.empty-green-map-section .approach-accordion-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 140%;
+  background-image: url("../assets/Links/compressed-img/worldmap-empty-light.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.empty-green-map-section .approach-accordion-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .ship-agri-slide {
@@ -2150,6 +2188,21 @@ body {
   background-position: center bottom !important;
 }
 
+/* Tablet & Laptop Viewports (769px to 1140px) */
+@media (min-width: 769px) and (max-width: 1140px) {
+  .empty-green-map-section {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Mobile Viewports (<= 768px) */
 @media (max-width: 768px) {
   .empty-green-map-section {
     min-height: fit-content;
